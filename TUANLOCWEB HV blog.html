@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CÔNG TY TNHH VẬT LIỆU XÂY DỰNG HÙNG VƯƠNG | Vĩnh Long & Miền Nam</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        earth: {
+                            800: '#5C3A21', // Nâu đất đậm
+                            700: '#7A4A28',
+                            600: '#9E5D32', // Terracotta
+                            500: '#C07844',
+                            200: '#EBD5C1',
+                            100: '#F7EFE9',
+                            50: '#FAF5F0',
+                        },
+                        sand: {
+                            400: '#E2B155', // Cát vàng
+                            300: '#EFC97B',
+                            100: '#FAF2DE',
+                        },
+                        concrete: {
+                            800: '#343A40',
+                            600: '#6C757D',
+                            200: '#E9ECEF',
+                            100: '#F8F9FA',
+                        },
+                        navyTrust: {
+                            900: '#0A2540',
+                            800: '#0F3460',
+                            600: '#1A5F7A',
+                        },
+                        ecoGreen: {
+                            600: '#2E7D32',
+                        },
+                        actionOrange: {
+                            500: '#E65100',
+                            600: '#BF360C',
+                        }
+                    },
+                    fontFamily: {
+                        title: ['Montserrat', 'sans-serif'],
+                        body: ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+        .calc-tab.active {
+            background-color: #9E5D32;
+            color: white;
+            border-color: #9E5D32;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(10, 37, 64, 0.75), rgba(92, 58, 33, 0.75)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FAF5F0; }
+        ::-webkit-scrollbar-thumb { background: #C07844; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #9E5D32; }
+    </style>
+</head>
+<body class="bg-earth-50 text-concrete-800 antialiased selection:bg-earth-500 selection:text-white">
+
+    <!-- TOP HEADER / CONTACT STRIP -->
+    <div class="bg-navyTrust-900 text-white text-xs sm:text-sm py-2 px-4 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-sand-400"></i> 136/2C Đồng Văn Cống, P. An Hội, Vĩnh Long (Bến Tre) </span>
+                <span class="hidden lg:inline-block">|</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-truck-fast text-sand-400"></i> Cung ứng nhanh Vĩnh Long & Toàn Miền Nam</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:0977207878" class="hover:text-sand-400 transition font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-ecoGreen-600 animate-pulse"></i> 0977.207.878
+                </a>
+                <a href="tel:0975238333" class="hover:text-sand-400 transition font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-ecoGreen-600 animate-pulse"></i> 0975.238.333
+                </a>
+                <!-- Facebook Badge Link -->
+                <a href="https://www.facebook.com/vlxdhungvuong2001" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white px-2.5 py-0.5 rounded-full flex items-center gap-1 text-xs transition shadow" title="Ghé thăm Fanpage Facebook">
+                    <i class="fa-brands fa-facebook-f"></i> <span class="hidden sm:inline">Fanpage</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-earth-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-earth-700 to-earth-500 flex items-center justify-center text-white text-2xl font-black shadow-lg transform group-hover:scale-105 transition">
+                        TL
+                    </div>
+                    <div>
+                        <span class="block text-xl font-extrabold text-navyTrust-900 tracking-tight group-hover:text-earth-600 transition">HÙNG VƯƠNG</span>
+                        <span class="block text-[10px] font-bold text-earth-600 uppercase tracking-widest">Vật Liệu Xây Dựng</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 font-medium text-concrete-800 text-sm lg:text-base">
+                    <a href="#about" class="hover:text-earth-600 transition py-2 border-b-2 border-transparent hover:border-earth-600">Giới Thiệu</a>
+                    <a href="#products" class="hover:text-earth-600 transition py-2 border-b-2 border-transparent hover:border-earth-600">Sản Phẩm</a>
+                    <a href="#calculator" class="text-earth-600 font-bold hover:text-earth-800 transition py-2 flex items-center gap-1">
+                        <i class="fa-solid fa-calculator text-actionOrange-500"></i> Bộ Tính Vật Liệu
+                    </a>
+					<a href="#blog" class="text-stone-700 hover:text-amber-700 font-medium transition">Kinh Nghiệm & Blog</a>
+                    <a href="#services" class="hover:text-earth-600 transition py-2 border-b-2 border-transparent hover:border-earth-600">Dịch Vụ</a>
+                    <a href="#contact" class="hover:text-earth-600 transition py-2 border-b-2 border-transparent hover:border-earth-600">Liên Hệ</a>
+                </div>
+
+                <!-- Action Button & Maps Quick Link -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="https://maps.app.goo.gl/PYNPEWaqqfr5iVPA9" target="_blank" class="px-3 py-2 text-xs font-semibold rounded-md border border-earth-600 text-earth-700 hover:bg-earth-100 transition flex items-center gap-1">
+                        <i class="fa-solid fa-map-location-dot text-earth-600"></i> Chỉ Đường
+                    </a>
+                    <a href="#calculator" class="bg-actionOrange-500 hover:bg-actionOrange-600 text-white font-bold px-4 py-2.5 rounded-lg shadow-md hover:shadow-lg transition flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-compass-drafting"></i> Dự Toán Ngay
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-concrete-800 hover:text-earth-600 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-earth-200 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block py-2 text-concrete-800 hover:text-earth-600 font-medium">Giới Thiệu</a>
+            <a href="#products" class="block py-2 text-concrete-800 hover:text-earth-600 font-medium">Sản Phẩm & Báo Giá</a>
+            <a href="#calculator" class="block py-2 text-earth-600 font-bold bg-earth-50 px-3 rounded-md"><i class="fa-solid fa-calculator text-actionOrange-500 mr-2"></i>Bộ Công Cụ Tính Vật Liệu</a>
+            <a href="#blog" class="block py-2 text-concrete-800 hover:text-earth-600 font-medium transition">Kinh Nghiệm & Blog</a>
+			<a href="#services" class="block py-2 text-concrete-800 hover:text-earth-600 font-medium">Dịch Vụ Vận Chuyển</a>
+            <a href="#contact" class="block py-2 text-concrete-800 hover:text-earth-600 font-medium">Liên Hệ & Bản Đồ</a>
+		   <div class="pt-2 flex flex-col gap-2">
+                <a href="tel:0977207878" class="w-full text-center bg-earth-600 text-white font-bold py-2 rounded-lg"><i class="fa-solid fa-phone mr-2"></i>Gọi 0977.207.878</a>
+                <a href="https://maps.app.goo.gl/PYNPEWaqqfr5iVPA9" target="_blank" class="w-full text-center border border-earth-600 text-earth-700 font-medium py-2 rounded-lg"><i class="fa-solid fa-map-marked-alt mr-2"></i>Xem Google Maps</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative hero-bg text-white py-20 lg:py-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8 space-y-6 text-center lg:text-left">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-sand-400/20 border border-sand-400 text-sand-300 font-semibold text-xs sm:text-sm tracking-wide uppercase">
+                        <i class="fa-solid fa-shield-halved mr-1"></i> Bền Vững - Uy Tín - Nhanh Chóng
+                    </span>
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        VỮNG NỀN MÓNG<br>
+                        <span class="text-sand-400">BỀN TƯƠNG LAI</span> CÙNG HÙNG VƯƠNG
+                    </h1>
+                    <p class="text-gray-200 text-base sm:text-lg max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                        Chuyên cung cấp tổng hợp vật liệu xây dựng chất lượng cao: Cát, đá, xi măng, gạch ống, gạch men, la phông, sơn tường, thép xây dựng... Cung ứng nhanh tại Vĩnh Long và khắp các tỉnh Miền Nam.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#calculator" class="bg-actionOrange-500 hover:bg-actionOrange-600 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <i class="fa-solid fa-calculator text-lg"></i> Tính Vật Liệu Công Trình
+                        </a>
+                        <a href="https://zalo.me/0977207878" target="_blank" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-semibold px-6 py-3.5 rounded-xl transition flex items-center gap-2">
+                            <i class="fa-solid fa-comment-dots text-blue-400 text-lg"></i> Báo Giá Zalo Trực Tiếp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Highlights Card -->
+                <div class="lg:col-span-4 mt-8 lg:mt-0">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-2xl text-white space-y-4">
+                        <h3 class="text-lg font-bold text-sand-300 border-b border-white/10 pb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-star text-sand-400"></i> Thế Mạnh Của HÙNG VƯƠNG
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-full bg-sand-400/20 flex items-center justify-center shrink-0 text-sand-400 font-bold"><i class="fa-solid fa-check"></i></div>
+                                <div><strong class="block text-white">Chất lượng chuẩn mực:</strong> Vật liệu xuất xứ rõ ràng, xi măng, gạch, sơn chính hãng.</div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-full bg-sand-400/20 flex items-center justify-center shrink-0 text-sand-400 font-bold"><i class="fa-solid fa-truck"></i></div>
+                                <div><strong class="block text-white">Giao hàng thần tốc:</strong> Đội xe ben, xe tải sẵn sàng vận chuyển tận công trình.</div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-full bg-sand-400/20 flex items-center justify-center shrink-0 text-sand-400 font-bold"><i class="fa-solid fa-coins"></i></div>
+                                <div><strong class="block text-white">Giá cả cạnh tranh:</strong> Báo giá minh bạch, chiết khấu tốt cho nhà thầu & đại lý.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO & ABOUT SECTION -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-earth-100">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80" alt="Vật liệu xây dựng HÙNG VƯƠNG" class="w-full h-auto object-cover">
+                    </div>
+                    <!-- Decorative Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-earth-700 text-white p-6 rounded-2xl shadow-xl hidden sm:block z-20">
+                        <p class="text-3xl font-extrabold text-sand-400">100%</p>
+                        <p class="text-xs font-semibold uppercase tracking-wider">Tin Tưởng & Đồng Hành</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 text-earth-600 font-bold text-sm tracking-wider uppercase">
+                        <span class="w-8 h-0.5 bg-earth-600"></span> Về Chúng Tôi
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-navyTrust-900 leading-tight">
+                        VẬT LIỆU XÂY DỰNG & TRANG TRÍ NỘI THẤT HÙNG VƯƠNG
+                    </h2>
+                    <p class="text-concrete-600 leading-relaxed">
+                        Tự hào là đơn vị uy tín hàng đầu tại <strong>Tỉnh Vĩnh Long và khu vực Miền Nam</strong> trong lĩnh vực phân phối vật liệu xây dựng thô và hoàn thiện. Với phương châm <em class="text-earth-700 font-semibold">"Trường tồn cùng mọi công trình"</em>, chúng tôi cam kết mang đến giải pháp vật liệu toàn diện, đúng tiến độ và tối ưu chi phí cho gia đình & đối tác.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 py-2">
+                        <div class="bg-earth-50 p-4 rounded-xl border border-earth-200">
+                            <i class="fa-solid fa-map-location-dot text-2xl text-earth-600 mb-2"></i>
+                            <h4 class="font-bold text-navyTrust-900">Địa chỉ rõ ràng</h4>
+                            <p class="text-xs text-concrete-600 mt-1">136/2C Đồng Văn Cống, An Hội, Vĩnh Long (Bến Tre) </p>
+                        </div>
+                        <div class="bg-earth-50 p-4 rounded-xl border border-earth-200">
+                            <i class="fa-solid fa-globe text-2xl text-navyTrust-600 mb-2"></i>
+                            <h4 class="font-bold text-navyTrust-900">Phạm vi rộng lớn</h4>
+                            <p class="text-xs text-concrete-600 mt-1">Phục vụ tận nơi Vĩnh Long & các tỉnh Miền Nam</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="https://maps.app.goo.gl/PYNPEWaqqfr5iVPA9" target="_blank" class="bg-earth-700 hover:bg-earth-800 text-white font-semibold px-5 py-3 rounded-xl transition flex items-center gap-2">
+                            <i class="fa-solid fa-location-arrow"></i> Xem Vị Trí Cửa Hàng
+                        </a>
+                        <a href="https://www.facebook.com/vlxdhungvuong2001" target="_blank" class="bg-blue-50 text-blue-700 hover:bg-blue-100 font-semibold px-5 py-3 rounded-xl transition flex items-center gap-2 border border-blue-200">
+                            <i class="fa-brands fa-facebook"></i> Facebook Cửa Hàng
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS CATALOG SECTION -->
+    <section id="products" class="py-16 bg-earth-50 border-t border-earth-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-earth-600 font-bold text-sm tracking-wider uppercase">Sản Phẩm Cung Cấp</span>
+                <h2 class="text-3xl font-extrabold text-navyTrust-900 mt-1">DANH MỤC VẬT LIỆU XÂY DỰNG</h2>
+                <p class="text-concrete-600 mt-2 text-sm sm:text-base">Đầy đủ chủng loại từ phần thô đến phần hoàn thiện - Đảm bảo nguồn gốc & chất lượng.</p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10" id="product-tabs">
+                <button onclick="filterProducts('all')" class="prod-tab active px-4 py-2 rounded-xl font-medium text-sm transition bg-earth-700 text-white shadow-md">Tất Cả</button>
+                <button onclick="filterProducts('tho')" class="prod-tab px-4 py-2 rounded-xl font-medium text-sm transition bg-white text-concrete-600 hover:bg-earth-100 shadow-sm border border-earth-200">Cát, Đá, Xi Măng</button>
+                <button onclick="filterProducts('gach')" class="prod-tab px-4 py-2 rounded-xl font-medium text-sm transition bg-white text-concrete-600 hover:bg-earth-100 shadow-sm border border-earth-200">Gạch Ống & Gạch Men</button>
+                <button onclick="filterProducts('hoanthien')" class="prod-tab px-4 py-2 rounded-xl font-medium text-sm transition bg-white text-concrete-600 hover:bg-earth-100 shadow-sm border border-earth-200">Sơn & La Phông</button>
+                <button onclick="filterProducts('thep')" class="prod-tab px-4 py-2 rounded-xl font-medium text-sm transition bg-white text-concrete-600 hover:bg-earth-100 shadow-sm border border-earth-200">Sắt Thép & Khác</button>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="product-grid">
+                
+                <!-- Product 1 -->
+                <div class="product-item tho bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-earth-200 flex flex-col">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=500&q=80" alt="Cát xây tô, Cát san lấp" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-earth-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Cát Đá</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-navyTrust-900 text-lg">Cát Vàng, Cát Xây Tô & San Lấp</h3>
+                            <p class="text-xs text-concrete-600 mt-1">Cát sạch không tạp chất, đạt tiêu chuẩn đổ bê tông và tô trát tường.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs text-earth-700 font-semibold">Theo m³ / Xe ben</span>
+                            <a href="https://zalo.me/0977207878" target="_blank" class="bg-ecoGreen-600 hover:bg-ecoGreen-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition"><i class="fa-solid fa-phone"></i> Báo giá</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item tho bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-earth-200 flex flex-col">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80" alt="Xi măng" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-earth-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Xi Măng</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-navyTrust-900 text-lg">Xi Măng Hà Tiên, Insee, Nghi Sơn</h3>
+                            <p class="text-xs text-concrete-600 mt-1">Xi măng đa dụng, mác cao, kết dính cực tốt cho mọi kết cấu.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs text-earth-700 font-semibold">Bao 50kg</span>
+                            <a href="https://zalo.me/0977207878" target="_blank" class="bg-ecoGreen-600 hover:bg-ecoGreen-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition"><i class="fa-solid fa-phone"></i> Báo giá</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-item gach bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-earth-200 flex flex-col">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=80" alt="Gạch ống" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-earth-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Gạch Đất Nung</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-navyTrust-900 text-lg">Gạch Ống 4 Lỗ (8x8x18, 4x8x18)</h3>
+                            <p class="text-xs text-concrete-600 mt-1">Gạch nung chuẩn kích thước, độ nung đều, chịu lực tốt, chuẩn chất lượng.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs text-earth-700 font-semibold">Theo Thiên (1000 viên)</span>
+                            <a href="https://zalo.me/0977207878" target="_blank" class="bg-ecoGreen-600 hover:bg-ecoGreen-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition"><i class="fa-solid fa-phone"></i> Báo giá</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-item gach bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-earth-200 flex flex-col">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1615971677499-5467cbab01c0?auto=format&fit=crop&w=500&q=80" alt="Gạch men lát sàn" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-earth-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Gạch Men</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-navyTrust-900 text-lg">Gạch Men Lát Sàn & Ốp Tường</h3>
+                            <p class="text-xs text-concrete-600 mt-1">Đa dạng kích thước 30x30, 60x60, 80x80, gạch giả gỗ, chống trơn trượt.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs text-earth-700 font-semibold">Theo m² / Thùng</span>
+                            <a href="https://zalo.me/0977207878" target="_blank" class="bg-ecoGreen-600 hover:bg-ecoGreen-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition"><i class="fa-solid fa-phone"></i> Báo giá</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-item hoanthien bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-earth-200 flex flex-col">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=500&q=80" alt="Sơn tường" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-navyTrust-800 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Sơn Nước</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-navyTrust-900 text-lg">Sơn Tường Nội & Ngoại Thất</h3>
+                            <p class="text-xs text-concrete-600 mt-1">Sơn lót chống kiềm, sơn phủ chống thấm, lên màu chuẩn đẹp bền màu.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs text-earth-700 font-semibold">Thùng 18L / Lon 5L</span>
+                            <a href="https://zalo.me/0977207878" target="_blank" class="bg-ecoGreen-600 hover:bg-ecoGreen-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition"><i class="fa-solid fa-phone"></i> Báo giá</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-item hoanthien bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-earth-200 flex flex-col">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=500&q=80" alt="La Phông Trần" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-navyTrust-800 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Trần & La Phông</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-navyTrust-900 text-lg">Tấm La Phông Thạch Cao & Trần Nhựa</h3>
+                            <p class="text-xs text-concrete-600 mt-1">Tấm 60x60, tấm dài, khung xương đồng bộ, cách nhiệt chống nóng hiệu quả.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs text-earth-700 font-semibold">Theo Tấm / m²</span>
+                            <a href="https://zalo.me/0977207878" target="_blank" class="bg-ecoGreen-600 hover:bg-ecoGreen-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition"><i class="fa-solid fa-phone"></i> Báo giá</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-item thep bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-earth-200 flex flex-col">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=500&q=80" alt="Sắt thép xây dựng" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-actionOrange-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Thép</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-navyTrust-900 text-lg">Sắt Thép Miền Nam, Hòa Phát</h3>
+                            <p class="text-xs text-concrete-600 mt-1">Thép cuộn Phi 6, Phi 8, Thép cây Phi 10-22, xà gồ C, thép hộp mạ kẽm.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs text-earth-700 font-semibold">Theo Kg / Cây</span>
+                            <a href="https://zalo.me/0977207878" target="_blank" class="bg-ecoGreen-600 hover:bg-ecoGreen-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition"><i class="fa-solid fa-phone"></i> Báo giá</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-item tho bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-earth-200 flex flex-col">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Đá xây dựng" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-earth-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Cát Đá</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-navyTrust-900 text-lg">Đá 1x2, Đá 4x6, Đá Sàng</h3>
+                            <p class="text-xs text-concrete-600 mt-1">Đá xanh cứng chuẩn, sàng lọc kỹ, chuyên dùng trộn bê tông và lót nền.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs text-earth-700 font-semibold">Theo m³ / Xe</span>
+                            <a href="https://zalo.me/0977207878" target="_blank" class="bg-ecoGreen-600 hover:bg-ecoGreen-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition"><i class="fa-solid fa-phone"></i> Báo giá</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE MATERIAL CALCULATOR SECTION -->
+    <section id="calculator" class="py-16 bg-gradient-to-b from-white to-earth-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="px-3 py-1 bg-earth-100 text-earth-700 rounded-full font-bold text-xs uppercase tracking-wider inline-block mb-2">
+                    <i class="fa-solid fa-sliders text-actionOrange-500 mr-1"></i> Độc Quyền Dành Cho Khách Hàng HÙNG VƯƠNG
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navyTrust-900">BỘ CÔNG CỤ TÍNH VẬT LIỆU XÂY DỰNG</h2>
+                <p class="text-concrete-600 mt-2 text-sm sm:text-base">Dự toán nhanh chóng - Chính xác khối lượng cát, gạch, xi măng, sơn, la phông cho công trình của bạn.</p>
+            </div>
+
+            <!-- Calculator Container -->
+            <div class="bg-white rounded-3xl shadow-2xl border border-earth-200 overflow-hidden">
+                
+                <!-- Calculator Navigation Tabs -->
+                <div class="bg-navyTrust-900 p-2 sm:p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 text-center text-xs sm:text-sm font-bold">
+                    <button onclick="switchCalc('tuong')" id="tab-tuong" class="calc-tab active p-3 rounded-xl border border-transparent transition flex flex-col items-center justify-center gap-1">
+                        <i class="fa-solid fa-cubes-stacked text-base sm:text-lg"></i> 1. Xây Tường
+                    </button>
+                    <button onclick="switchCalc('san')" id="tab-san" class="calc-tab p-3 text-white/80 hover:bg-white/10 rounded-xl border border-transparent transition flex flex-col items-center justify-center gap-1">
+                        <i class="fa-solid fa-border-all text-base sm:text-lg"></i> 2. Lát Sàn / Ốp
+                    </button>
+                    <button onclick="switchCalc('laphong')" id="tab-laphong" class="calc-tab p-3 text-white/80 hover:bg-white/10 rounded-xl border border-transparent transition flex flex-col items-center justify-center gap-1">
+                        <i class="fa-solid fa-grip text-base sm:text-lg"></i> 3. La Phông / Trần
+                    </button>
+                    <button onclick="switchCalc('son')" id="tab-son" class="calc-tab p-3 text-white/80 hover:bg-white/10 rounded-xl border border-transparent transition flex flex-col items-center justify-center gap-1">
+                        <i class="fa-solid fa-paint-roller text-base sm:text-lg"></i> 4. Sơn Tường
+                    </button>
+                    <button onclick="switchCalc('betong')" id="tab-betong" class="calc-tab p-3 text-white/80 hover:bg-white/10 rounded-xl border border-transparent transition flex flex-col items-center justify-center gap-1 col-span-2 sm:col-span-1">
+                        <i class="fa-solid fa-truck-ramp-box text-base sm:text-lg"></i> 5. Bê Tông
+                    </button>
+                </div>
+
+                <!-- Calculator Body -->
+                <div class="p-6 sm:p-8">
+                    <div class="grid lg:grid-cols-12 gap-8">
+                        
+                        <!-- Input Form Column -->
+                        <div class="lg:col-span-7 space-y-6">
+                            
+                            <!-- TAB 1: XÂY TƯỜNG -->
+                            <div id="calc-form-tuong" class="calc-form space-y-4">
+                                <h3 class="text-lg font-bold text-earth-800 border-b pb-2 flex items-center gap-2">
+                                    <i class="fa-solid fa-wall text-earth-600"></i> Tính Số Lượng Gạch, Cát, Xi Măng Xây Tường
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Loại gạch ống</label>
+                                        <select id="tuong-gach-type" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                            <option value="8x8x18">Gạch Ống 4 Lỗ (8x8x18 cm)</option>
+                                            <option value="4x8x18">Gạch Đờm /Thẻ (4x8x18 cm)</option>
+                                            <option value="khongnung">Gạch Không Nung / Block</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Độ dày tường</label>
+                                        <select id="tuong-day" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                            <option value="10">Tường 10 (Dày ~10cm)</option>
+                                            <option value="20">Tường 20 (Dày ~20cm - Tường đôi)</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Chiều dài tường (m)</label>
+                                        <input type="number" id="tuong-dai" value="10" min="0" step="0.1" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Chiều cao tường (m)</label>
+                                        <input type="number" id="tuong-cao" value="3.5" min="0" step="0.1" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TAB 2: LÁT SÀN / ỐP -->
+                            <div id="calc-form-san" class="calc-form hidden space-y-4">
+                                <h3 class="text-lg font-bold text-earth-800 border-b pb-2 flex items-center gap-2">
+                                    <i class="fa-solid fa-border-all text-earth-600"></i> Tính Số Thùng Gạch Men Lát Sàn & Keo Dán
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Kích thước gạch men</label>
+                                        <select id="san-gach-size" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                            <option value="30x30">Gạch 30 x 30 cm (11 viên/thùng ~ 0.99m²)</option>
+                                            <option value="40x40">Gạch 40 x 40 cm (6 viên/thùng ~ 0.96m²)</option>
+                                            <option value="50x50">Gạch 50 x 50 cm (4 viên/thùng ~ 1.00m²)</option>
+                                            <option value="60x60" selected>Gạch 60 x 60 cm (4 viên/thùng ~ 1.44m²)</option>
+                                            <option value="80x80">Gạch 80 x 80 cm (3 viên/thùng ~ 1.92m²)</option>
+                                            <option value="30x60">Gạch ốp 30 x 60 cm (8 viên/thùng ~ 1.44m²)</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Diện tích sàn / tường (m²)</label>
+                                        <input type="number" id="san-dientich" value="50" min="0" step="1" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TAB 3: LA PHÔNG -->
+                            <div id="calc-form-laphong" class="calc-form hidden space-y-4">
+                                <h3 class="text-lg font-bold text-earth-800 border-b pb-2 flex items-center gap-2">
+                                    <i class="fa-solid fa-grip text-earth-600"></i> Tính Tấm La Phông & Khung Xương
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Loại trần / La Phông</label>
+                                        <select id="laphong-type" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                            <option value="60x60">Trần Thạch Cao Thả 60x60 cm</option>
+                                            <option value="122x244">Trần Thạch Cao Chìm (Tấm 1.22 x 2.44 m)</option>
+                                            <option value="nhua60">Trần Nhựa Ô Vuông 60x60 cm</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Diện tích trần (m²)</label>
+                                        <input type="number" id="laphong-dientich" value="40" min="0" step="1" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TAB 4: SƠN TƯỜNG -->
+                            <div id="calc-form-son" class="calc-form hidden space-y-4">
+                                <h3 class="text-lg font-bold text-earth-800 border-b pb-2 flex items-center gap-2">
+                                    <i class="fa-solid fa-paint-roller text-earth-600"></i> Tính Lượng Sơn Lót, Sơn Phủ & Bột Trét
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Diện tích sơn (m²)</label>
+                                        <input type="number" id="son-dientich" value="120" min="0" step="1" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Quy cách sơn</label>
+                                        <select id="son-quycach" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                            <option value="standard">Chuẩn (1 Lót + 2 Phủ)</option>
+                                            <option value="high">Cao cấp (2 Lót + 2 Phủ)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TAB 5: BÊ TÔNG -->
+                            <div id="calc-form-betong" class="calc-form hidden space-y-4">
+                                <h3 class="text-lg font-bold text-earth-800 border-b pb-2 flex items-center gap-2">
+                                    <i class="fa-solid fa-truck-ramp-box text-earth-600"></i> Tính Cấp Mác Bê Tông & Xi Măng / Cát / Đá
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Mác Bê Tông</label>
+                                        <select id="betong-mac" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                            <option value="M200">Mác M200 (Chịu lực vừa, nhà dân)</option>
+                                            <option value="M250" selected>Mác M250 (Phổ biến móng, sàn, cột)</option>
+                                            <option value="M300">Mác M300 (Chịu lực cao)</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-concrete-800 uppercase mb-1">Thể tích bê tông (m³)</label>
+                                        <input type="number" id="betong-thetich" value="5" min="0" step="0.5" class="w-full bg-earth-50 border border-earth-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-earth-500 outline-none">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button onclick="calculateMaterial()" class="w-full bg-earth-700 hover:bg-earth-800 text-white font-bold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-base">
+                                <i class="fa-solid fa-calculator"></i> TÍNH KHỐI LƯỢNG NGAY
+                            </button>
+
+                        </div>
+
+                        <!-- Calculation Results Column -->
+                        <div class="lg:col-span-5 bg-earth-50 rounded-2xl p-6 border border-earth-200 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between border-b border-earth-200 pb-3 mb-4">
+                                    <h4 class="font-bold text-navyTrust-900 text-lg flex items-center gap-2">
+                                        <i class="fa-solid fa-clipboard-check text-ecoGreen-600"></i> Bảng Kết Quả Dự Toán
+                                    </h4>
+                                    <span class="text-[10px] bg-earth-200 text-earth-800 px-2 py-0.5 rounded font-bold uppercase">Ước Tính</span>
+                                </div>
+
+                                <!-- Dynamic Results View -->
+                                <div id="result-container" class="space-y-3 text-sm">
+                                    <!-- Results injected via JavaScript -->
+                                </div>
+                            </div>
+
+                            <!-- Action buttons for results -->
+                            <div class="pt-6 border-t border-earth-200 mt-6 space-y-2">
+                                <button onclick="sendZaloEstimate()" class="w-full bg-ecoGreen-600 hover:bg-ecoGreen-700 text-white font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2 text-xs sm:text-sm shadow">
+                                    <i class="fa-solid fa-paper-plane"></i> Gửi Zalo Báo Giá Nhanh HÙNG VƯƠNG
+                                </button>
+                                <button onclick="window.print()" class="w-full bg-white hover:bg-gray-100 text-concrete-800 font-semibold py-2 rounded-xl transition border border-gray-300 text-xs flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-print"></i> In Bảng Dự Toán
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US & DELIVERY PROCESS -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-earth-600 font-bold text-sm tracking-wider uppercase">Dịch Vụ Chuyên Nghiệp</span>
+                <h2 class="text-3xl font-extrabold text-navyTrust-900 mt-1">QUY TRÌNH PHỤC VỤ TẬN TÂM</h2>
+                <p class="text-concrete-600 mt-2 text-sm sm:text-base">Giao hàng nhanh gọn - Báo giá minh bạch - Hỗ trợ tận tâm tại Vĩnh Long và Toàn Miền Nam</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-earth-50 p-6 rounded-2xl border border-earth-200 text-center relative group hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-earth-700 text-white rounded-2xl flex items-center justify-center text-xl font-bold mx-auto mb-4 shadow-md group-hover:scale-110 transition">
+                        01
+                    </div>
+                    <h3 class="font-bold text-navyTrust-900 text-lg mb-2">Tiếp Nhận & Tư Vấn</h3>
+                    <p class="text-xs text-concrete-600 leading-relaxed">Nhận yêu cầu qua Hotline/Zalo, tư vấn vật liệu phù hợp với nhu cầu và ngân sách.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-earth-50 p-6 rounded-2xl border border-earth-200 text-center relative group hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-sand-400 text-navyTrust-900 rounded-2xl flex items-center justify-center text-xl font-bold mx-auto mb-4 shadow-md group-hover:scale-110 transition">
+                        02
+                    </div>
+                    <h3 class="font-bold text-navyTrust-900 text-lg mb-2">Báo Giá Tốt Nhất</h3>
+                    <p class="text-xs text-concrete-600 leading-relaxed">Lập bảng báo giá chi tiết, công khai, ưu đãi chiết khấu theo khối lượng công trình.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-earth-50 p-6 rounded-2xl border border-earth-200 text-center relative group hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-earth-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mx-auto mb-4 shadow-md group-hover:scale-110 transition">
+                        03
+                    </div>
+                    <h3 class="font-bold text-navyTrust-900 text-lg mb-2">Vận Chuyển Tận Nơi</h3>
+                    <p class="text-xs text-concrete-600 leading-relaxed">Điều động xe ben, xe tải chở thẳng tới công trình đúng hẹn, đảm bảo số lượng.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-earth-50 p-6 rounded-2xl border border-earth-200 text-center relative group hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-ecoGreen-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mx-auto mb-4 shadow-md group-hover:scale-110 transition">
+                        04
+                    </div>
+                    <h3 class="font-bold text-navyTrust-900 text-lg mb-2">Nghiệm Thu & Thanh Toán</h3>
+                    <p class="text-xs text-concrete-600 leading-relaxed">Khách hàng kiểm tra chất lượng vật liệu trước khi nghiệm thu thanh toán linh hoạt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="py-16 bg-earth-100/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-earth-600 font-bold text-xs uppercase">Đánh Giá Từ Khách Hàng</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-navyTrust-900 mt-1">SỰ HÀI LÒNG LÀ UY TÍN CỦA HÙNG VƯƠNG</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-earth-200">
+                    <div class="flex text-sand-400 text-xs mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-concrete-600 italic mb-4">"Cửa hàng HÙNG VƯƠNG giao cát đá rất nhanh tại An Hội, Vĩnh Long. Cát sạch, gạch ống giao đủ số lượng không vỡ. Rất tin tưởng hợp tác lâu dài."</p>
+                    <div class="font-bold text-sm text-navyTrust-900">Anh Minh (Nhà thầu Vĩnh Long)</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-earth-200">
+                    <div class="flex text-sand-400 text-xs mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-concrete-600 italic mb-4">"Bộ công cụ tính vật liệu trên trang web HÙNG VƯƠNG rất tiện lợi. Mình tự tính được số lượng gạch men và sơn cho căn nhà mới cực kỳ chính xác!"</p>
+                    <div class="font-bold text-sm text-navyTrust-900">Chị Hạnh (Chủ nhà)</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-earth-200">
+                    <div class="flex text-sand-400 text-xs mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-concrete-600 italic mb-4">"Giá xi măng và sắt thép ở đây tốt hàng đầu khu vực Miền Nam. Đội ngũ tư vấn nhiệt tình, có xe chở tận công trình xa."</p>
+                    <div class="font-bold text-sm text-navyTrust-900">Chú Tuấn (Kỹ sư công trình)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<!-- ================= SECTION BLOG & KIẾN THỨC ================= -->
+	<!-- Khung Đăng Bài Dành Cho Quản Trị Viên (Mặc định ẩn) -->
+<div id="adminBlogPanel" class="hidden mb-12 bg-stone-900 text-white p-6 md:p-8 rounded-2xl shadow-2xl border border-stone-700">
+    <div class="flex justify-between items-center mb-6 pb-4 border-b border-stone-800">
+        <h3 class="text-xl font-bold text-amber-400 flex items-center gap-2">
+            <span>✍️</span> Bảng Quản Trị - Đăng Bài Viết Mới
+        </h3>
+        <button onclick="toggleAdminPanel()" class="text-stone-400 hover:text-white text-sm bg-stone-800 px-3 py-1.5 rounded-lg transition">
+            ✕ Đóng Form
+        </button>
+    </div>
+
+    <form onsubmit="handleAddNewPost(event)" class="space-y-5">
+        <div>
+            <label class="block text-sm font-semibold mb-1.5 text-stone-200">Tiêu đề bài viết <span class="text-red-400">*</span></label>
+            <input type="text" id="newTitle" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Ví dụ: Báo giá xi măng mới nhất tháng này tại Vĩnh Long...">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm font-semibold mb-1.5 text-stone-200">Danh mục <span class="text-red-400">*</span></label>
+                <select id="newCategory" class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm">
+                    <option value="vat-lieu|Chọn vật liệu">Chọn vật liệu</option>
+                    <option value="kinh-nghiem|Kinh nghiệm">Kinh nghiệm xây dựng</option>
+                    <option value="phong-thuy|Phong thủy">Phong thủy & Thiết kế</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold mb-1.5 text-stone-200">Link Hình Ảnh (URL) <span class="text-red-400">*</span></label>
+                <input type="url" id="newImage" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Dán link ảnh từ Facebook/Unsplash/Imgur...">
+            </div>
+        </div>
+
+        <div>
+            <label class="block text-sm font-semibold mb-1.5 text-stone-200">Tóm tắt ngắn (Hiển thị ngoài thẻ card) <span class="text-red-400">*</span></label>
+            <textarea id="newSummary" rows="2" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Mô tả tóm tắt nội dung trong 2 - 3 câu ngắn gọn..."></textarea>
+        </div>
+
+        <div>
+            <label class="block text-sm font-semibold mb-1.5 text-stone-200">Nội dung chi tiết bài viết <span class="text-red-400">*</span></label>
+            <textarea id="newContent" rows="6" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Nhập đầy đủ nội dung bài viết. Xuống dòng để tạo đoạn văn mới..."></textarea>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+            <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition flex items-center gap-2 shadow-lg">
+                <span>🚀</span> Đăng Bài Ngay
+            </button>
+            <button type="button" onclick="exportBlogData()" class="bg-stone-800 hover:bg-stone-700 text-amber-300 border border-amber-500/30 font-semibold px-4 py-2.5 rounded-xl text-xs transition">
+                📋 Xuất mã Code lưu vĩnh viễn
+            </button>
+        </div>
+    </form>
+</div>
+
+
+
+        <section id="blog" class="py-16 bg-stone-100 border-t border-stone-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Title -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-amber-700 font-bold uppercase tracking-wider text-sm">Góc Chia Sẻ & Tư Vấn</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-stone-900 mt-2">
+                        Kiến Thức & Kinh Nghiệm Xây Dựng
+                    </h2>
+                    <div class="w-24 h-1 bg-amber-600 mx-auto mt-4 rounded-full"></div>
+                    <p class="text-stone-600 mt-4">
+                        Cập nhật các bài viết hướng dẫn chọn vật liệu, kinh nghiệm thi công và xu hướng kiến trúc mới nhất từ VLXD Hùng Vương.
+                    </p>
+                </div>
+
+                <!-- Search & Filter Bar -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm mb-10 border border-stone-200">
+                    <div class="flex flex-col md:flex-row gap-4 justify-between items-center">
+                        <!-- Search Input -->
+                        <div class="relative w-full md:w-96">
+                            <input type="text" id="blogSearchInput" onkeyup="filterBlogPosts()" 
+                                   placeholder="Tìm kiếm bài viết (ví dụ: gạch, xi măng, sơn...)..." 
+                                   class="w-full pl-11 pr-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-transparent text-sm">
+                            <svg class="w-5 h-5 text-stone-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+
+                        <!-- Category Filters -->
+                        <div class="flex flex-wrap gap-2 w-full md:w-auto justify-start md:justify-end" id="blogCategoryFilters">
+                            <button onclick="filterBlogCategory('all')" class="blog-cat-btn active px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-amber-700 text-white">Tất cả</button>
+                            <button onclick="filterBlogCategory('kinh-nghiem')" class="blog-cat-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-stone-200 text-stone-700 hover:bg-stone-300">Kinh nghiệm</button>
+                            <button onclick="filterBlogCategory('vat-lieu')" class="blog-cat-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-stone-200 text-stone-700 hover:bg-stone-300">Chọn vật liệu</button>
+                            <button onclick="filterBlogCategory('phong-thuy')" class="blog-cat-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-stone-200 text-stone-700 hover:bg-stone-300">Phong thủy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Grid -->
+                <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Bài viết được render tự động bằng Javascript -->
+                </div>
+				<!-- Nút Bấm Mở Rộng / Thu Gọn Danh Sách Bài Viết -->
+<div id="blogToggleContainer" class="text-center mt-12 hidden">
+    <button id="blogToggleBtn" onclick="toggleBlogExpand()" class="inline-flex items-center gap-2 bg-stone-200 hover:bg-amber-800 hover:text-white text-stone-800 font-bold px-8 py-3.5 rounded-xl transition-all shadow-sm">
+        <span id="blogToggleText">Xem thêm bài viết</span>
+        <svg id="blogToggleIcon" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+    </button>
+</div>
+
+                <!-- No Results Message -->
+                <div id="noBlogResults" class="hidden text-center py-12">
+                    <svg class="w-16 h-16 text-stone-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <p class="text-stone-500 font-medium">Không tìm thấy bài viết phù hợp với từ khóa của bạn.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Modal Detail -->
+        <div id="blogModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+            <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 shadow-2xl relative">
+                <button onclick="closeBlogModal()" class="absolute top-4 right-4 bg-stone-100 text-stone-500 hover:text-stone-900 rounded-full p-2 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div id="blogModalContent">
+                    <!-- Nội dung bài viết chi tiết -->
+                </div>
+            </div>
+        </div>
+		
+    <!-- CONTACT & GOOGLE MAPS SECTION -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Contact Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-earth-600 font-bold text-xs uppercase">Liên Hệ Ngay</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-navyTrust-900 mt-1">CÔNG TY TNHH VLXD HÙNG VƯƠNG</h2>
+                        <p class="text-concrete-600 text-sm mt-2">Hãy gọi hoặc ghé trực tiếp cửa hàng để nhận tư vấn và báo giá ưu đãi nhất.</p>
+                    </div>
+
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-3 p-3 bg-earth-50 rounded-xl border border-earth-200">
+                            <i class="fa-solid fa-location-dot text-earth-700 text-lg mt-0.5"></i>
+                            <div>
+                                <strong class="block text-navyTrust-900 font-bold">Địa chỉ cửa hàng:</strong>
+                                <span class="text-concrete-600">136/2C, đường Đồng Văn Cống, phường An Hội, tỉnh Vĩnh Long</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 bg-earth-50 rounded-xl border border-earth-200">
+                            <i class="fa-solid fa-phone-volume text-ecoGreen-600 text-lg mt-0.5"></i>
+                            <div>
+                                <strong class="block text-navyTrust-900 font-bold">Hotline / Zalo hỗ trợ:</strong>
+                                <a href="tel:0977207878" class="text-earth-700 font-bold hover:underline">0977.207.878</a> - 
+                                <a href="tel:0975238333" class="text-earth-700 font-bold hover:underline">0975.238.333</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 bg-earth-50 rounded-xl border border-earth-200">
+                            <i class="fa-solid fa-map-location text-navyTrust-600 text-lg mt-0.5"></i>
+                            <div>
+                                <strong class="block text-navyTrust-900 font-bold">Phạm vi cung cấp:</strong>
+                                <span class="text-concrete-600">Toàn bộ tỉnh Vĩnh Long và các tỉnh khu vực Miền Nam</span>
+                            </div>
+                        </div>
+
+                        <!-- Facebook Icon Banner -->
+                        <div class="p-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl shadow-md flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-brands fa-facebook text-3xl"></i>
+                                <div>
+                                    <p class="font-bold text-sm">Fanpage HÙNG VƯƠNG</p>
+                                    <p class="text-[11px] text-blue-100">Cập nhật tin tức & báo giá mới nhất</p>
+                                </div>
+                            </div>
+                            <a href="https://www.facebook.com/vlxdhungvuong2001" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-800 hover:bg-blue-50 font-bold text-xs px-3 py-2 rounded-lg transition shadow">
+                                Truỵ Cập <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-earth-50 p-3 rounded-2xl border border-earth-200 shadow-lg">
+                        <div class="flex justify-between items-center px-2 py-2 mb-2">
+                            <span class="font-bold text-xs text-navyTrust-900 flex items-center gap-1.5">
+                                <i class="fa-solid fa-map-pin text-actionOrange-500"></i> Bản đồ định vị HÙNG VƯƠNG
+                            </span>
+                            <a href="https://maps.app.goo.gl/PYNPEWaqqfr5iVPA9" target="_blank" class="text-xs text-earth-700 hover:underline font-semibold flex items-center gap-1">
+                                Mở trên ứng dụng Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <!-- Responsive Map Container -->
+                        <div class="w-full h-80 sm:h-96 rounded-xl overflow-hidden border border-gray-300 relative">
+                            <iframe 
+                                title="Bản đồ VLXD HÙNG VƯƠNG"
+                                class="w-full h-full border-0"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1781.7339732841774!2d106.36206894005204!3d10.224345887292081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310aa86c6d5864fb%3A0xbd47c3148a645049!2zVuG6rXQgTGnhu4d1IFjDonkgROG7sW5nIEjDuW5nIFbGsMahbmcgLSBWTFhEICYgVHJhbmcgdHLDrSBu4buZdCB0aOG6pXQ!5e1!3m2!1svi!2sus!4v1792761804442!5m2!1svi!2sus" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-navyTrust-900 text-gray-300 pt-12 pb-6 border-t-4 border-earth-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8 text-sm">
+                
+                <div class="space-y-3 md:col-span-1">
+                    <div class="flex items-center gap-2">
+                        <div class="w-9 h-9 rounded bg-earth-600 flex items-center justify-center text-white font-bold">TL</div>
+                        <span class="font-extrabold text-white text-base">VLXD HÙNG VƯƠNG</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        CUNG CẤP VẬT LIỆU XÂY DỰNG CHUYÊN NGHIỆP - Uy tín, Bền Vững, Chất Lượng Hàng Đầu Tại Vĩnh Long & Miền Nam.
+                    </p>
+                    <div class="flex gap-3 pt-2">
+                        <a href="https://www.facebook.com/vlxdhungvuong2001" target="_blank" class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://maps.app.goo.gl/PYNPEWaqqfr5iVPA9" target="_blank" class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center hover:bg-red-700 transition">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                        </a>
+                        <a href="https://zalo.me/0977207878" target="_blank" class="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center hover:bg-blue-600 transition font-bold text-xs">
+                            Zalo
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-base mb-3 border-b border-gray-700 pb-2">Danh Mục Vật Liệu</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#products" class="hover:text-sand-400 transition">Cát Vàng, Cát Xây Tô</a></li>
+                        <li><a href="#products" class="hover:text-sand-400 transition">Xi Măng Hà Tiên, Insee</a></li>
+                        <li><a href="#products" class="hover:text-sand-400 transition">Gạch Ống, Gạch Thẻ</a></li>
+                        <li><a href="#products" class="hover:text-sand-400 transition">Gạch Men Lát Sàn & Ốp Tường</a></li>
+                        <li><a href="#products" class="hover:text-sand-400 transition">Sơn Nước, Bột Trét</a></li>
+                        <li><a href="#products" class="hover:text-sand-400 transition">La Phông & Trần Thạch Cao</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-base mb-3 border-b border-gray-700 pb-2">Công Cụ Tiện Ích</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#calculator" onclick="switchCalc('tuong')" class="hover:text-sand-400 transition"><i class="fa-solid fa-chevron-right text-[10px] mr-1 text-earth-500"></i> Tính gạch xây tường</a></li>
+                        <li><a href="#calculator" onclick="switchCalc('san')" class="hover:text-sand-400 transition"><i class="fa-solid fa-chevron-right text-[10px] mr-1 text-earth-500"></i> Tính gạch men lát sàn</a></li>
+                        <li><a href="#calculator" onclick="switchCalc('laphong')" class="hover:text-sand-400 transition"><i class="fa-solid fa-chevron-right text-[10px] mr-1 text-earth-500"></i> Tính tấm la phông trần</a></li>
+                        <li><a href="#calculator" onclick="switchCalc('son')" class="hover:text-sand-400 transition"><i class="fa-solid fa-chevron-right text-[10px] mr-1 text-earth-500"></i> Tính thùng sơn tường</a></li>
+                        <li><a href="#calculator" onclick="switchCalc('betong')" class="hover:text-sand-400 transition"><i class="fa-solid fa-chevron-right text-[10px] mr-1 text-earth-500"></i> Tính mác bê tông</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-base mb-3 border-b border-gray-700 pb-2">Thông Tin Liên Hệ</h4>
+                    <p class="text-xs leading-relaxed mb-2">
+                        <strong>CÔNG TY TNHH VLXD HÙNG VƯƠNG</strong>
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">
+                        <i class="fa-solid fa-location-dot text-sand-400 mr-1"></i> 136/2C, Đồng Văn Cống, P. An Hội, Vĩnh Long
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">
+                        <i class="fa-solid fa-phone text-ecoGreen-600 mr-1"></i> Hotline: 0977207878 - 0975238333
+                    </p>
+                    <p class="text-xs text-gray-400">
+                        <i class="fa-solid fa-truck text-sand-400 mr-1"></i> Giao hàng: Vĩnh Long & Miền Nam
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <p>© 2026 CÔNG TY TNHH VẬT LIỆU XÂY DỰNG HÙNG VƯƠNG. All rights reserved.</p>
+                <p>Địa chỉ: 136/2C Đồng Văn Cống, Phường An Hội, Vĩnh Long</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Product Category Filtering
+        function filterProducts(category) {
+            const tabs = document.querySelectorAll('.prod-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-earth-700', 'text-white');
+                tab.classList.add('bg-white', 'text-concrete-600');
+            });
+
+            event.target.classList.remove('bg-white', 'text-concrete-600');
+            event.target.classList.add('bg-earth-700', 'text-white');
+
+            const items = document.querySelectorAll('.product-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Calculator Tab Switcher
+        let activeCalcTab = 'tuong';
+
+        function switchCalc(tab) {
+            activeCalcTab = tab;
+            
+            // Hide all forms
+            document.querySelectorAll('.calc-form').forEach(f => f.classList.add('hidden'));
+            
+            // Remove active classes from tab buttons
+            document.querySelectorAll('.calc-tab').forEach(b => {
+                b.classList.remove('active', 'bg-earth-600', 'text-white');
+                b.classList.add('text-white/80');
+            });
+
+            // Show current form & active tab
+            document.getElementById(`calc-form-${tab}`).classList.remove('hidden');
+            const targetBtn = document.getElementById(`tab-${tab}`);
+            targetBtn.classList.add('active');
+
+            // Trigger calculation for default view
+            calculateMaterial();
+        }
+
+        // Global Variable to store current estimation text for Zalo
+        let currentEstimateText = "";
+
+        // Material Calculation Logic
+        function calculateMaterial() {
+            const resContainer = document.getElementById('result-container');
+            let html = "";
+            let summaryText = "DỰ TOÁN VLXD HÙNG VƯƠNG:\n";
+
+            if (activeCalcTab === 'tuong') {
+                const gachType = document.getElementById('tuong-gach-type').value;
+                const tuongDay = parseInt(document.getElementById('tuong-day').value);
+                const dai = parseFloat(document.getElementById('tuong-dai').value) || 0;
+                const cao = parseFloat(document.getElementById('tuong-cao').value) || 0;
+
+                const dientich = dai * cao;
+                let gachPerM2 = (tuongDay === 10) ? 68 : 135;
+                if (gachType === '4x8x18') gachPerM2 = (tuongDay === 10) ? 80 : 160;
+
+                const totalGach = Math.ceil(dientich * gachPerM2);
+                const xiMangBao = (dientich * (tuongDay === 10 ? 12 : 25) / 50).toFixed(1); // 1 bao = 50kg
+                const catM3 = (dientich * (tuongDay === 10 ? 0.025 : 0.05)).toFixed(2);
+
+                html = `
+                    <div class="bg-white p-3 rounded-xl border border-earth-200">
+                        <span class="text-xs text-concrete-600">Diện tích tường xây:</span>
+                        <div class="text-lg font-bold text-earth-800">${dientich.toFixed(2)} m²</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-earth-200">
+                        <span class="text-xs text-concrete-600">Số lượng gạch cần dùng:</span>
+                        <div class="text-xl font-extrabold text-earth-700">${totalGach.toLocaleString('vi-VN')} viên</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="bg-white p-3 rounded-xl border border-earth-200">
+                            <span class="text-xs text-concrete-600">Xi măng ước tính:</span>
+                            <div class="text-base font-bold text-navyTrust-900">${xiMangBao} Bao (50kg)</div>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-earth-200">
+                            <span class="text-xs text-concrete-600">Cát xây tô:</span>
+                            <div class="text-base font-bold text-navyTrust-900">${catM3} m³</div>
+                        </div>
+                    </div>
+                `;
+                summaryText += `- Xây Tường (${dientich.toFixed(1)}m²)\n- Số gạch: ${totalGach} viên\n- Xi măng: ${xiMangBao} bao\n- Cát: ${catM3} m3`;
+
+            } else if (activeCalcTab === 'san') {
+                const gachSize = document.getElementById('san-gach-size').value;
+                const dt = parseFloat(document.getElementById('san-dientich').value) || 0;
+
+                let m2PerThung = 1.44;
+                if (gachSize === '30x30') m2PerThung = 0.99;
+                else if (gachSize === '40x40') m2PerThung = 0.96;
+                else if (gachSize === '50x50') m2PerThung = 1.00;
+                else if (gachSize === '60x60') m2PerThung = 1.44;
+                else if (gachSize === '80x80') m2PerThung = 1.92;
+                else if (gachSize === '30x60') m2PerThung = 1.44;
+
+                const numThung = Math.ceil((dt * 1.05) / m2PerThung); // 5% hao hụt
+                const keoBao = Math.ceil(dt / 5); // 1 bao keo dán ~5m2
+
+                html = `
+                    <div class="bg-white p-3 rounded-xl border border-earth-200">
+                        <span class="text-xs text-concrete-600">Diện tích lát sàn / ốp:</span>
+                        <div class="text-lg font-bold text-earth-800">${dt} m²</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-earth-200">
+                        <span class="text-xs text-concrete-600">Số thùng gạch men (${gachSize}):</span>
+                        <div class="text-xl font-extrabold text-earth-700">${numThung} Thùng (đã gồm 5% hao hụt)</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-earth-200">
+                        <span class="text-xs text-concrete-600">Keo dán gạch / Xi măng chát:</span>
+                        <div class="text-base font-bold text-navyTrust-900">~ ${keoBao} Bao (25kg)</div>
+                    </div>
+                `;
+                summaryText += `- Lát Sàn (${dt}m², loại ${gachSize})\n- Số thùng gạch: ${numThung} thùng\n- Keo dán: ${keoBao} bao`;
+
+            } else if (activeCalcTab === 'laphong') {
+                const lpType = document.getElementById('laphong-type').value;
+                const dt = parseFloat(document.getElementById('laphong-dientich').value) || 0;
+
+                let numTam = 0;
+                if (lpType === '60x60' || lpType === 'nhua60') {
+                    numTam = Math.ceil(dt / 0.36);
+                } else { // 122x244 cm ~ 2.97 m2
+                    numTam = Math.ceil(dt / 2.97);
+                }
+
+                const thanhChinh = Math.ceil(dt * 0.8);
+                const thanhPhu = Math.ceil(dt * 1.5);
+
+                html = `
+                    <div class="bg-white p-3 rounded-xl border border-earth-200">
+                        <span class="text-xs text-concrete-600">Diện tích trần:</span>
+                        <div class="text-lg font-bold text-earth-800">${dt} m²</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-earth-200">
+                        <span class="text-xs text-concrete-600">Số tấm la phông cần dùng:</span>
+                        <div class="text-xl font-extrabold text-earth-700">${numTam} Tấm</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="bg-white p-3 rounded-xl border border-earth-200">
+                            <span class="text-xs text-concrete-600">Thanh chính (xương):</span>
+                            <div class="text-base font-bold text-navyTrust-900">~ ${thanhChinh} Thanh</div>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-earth-200">
+                            <span class="text-xs text-concrete-600">Thanh phụ / viền:</span>
+                            <div class="text-base font-bold text-navyTrust-900">~ ${thanhPhu} Thanh</div>
+                        </div>
+                    </div>
+                `;
+                summaryText += `- La Phông Trần (${dt}m²)\n- Tấm la phông: ${numTam} tấm\n- Khung xương: ~${thanhChinh} thanh chính`;
+
+            } else if (activeCalcTab === 'son') {
+                const dt = parseFloat(document.getElementById('son-dientich').value) || 0;
+                const qy = document.getElementById('son-quycach').value;
+
+                // 1 thùng 18L sơn lót ~ 100m2/lớp; sơn phủ ~ 80m2/2 lớp
+                const thungLot = Math.ceil(dt / (qy === 'high' ? 50 : 100)); 
+                const thungPhu = Math.ceil(dt / 70); 
+                const baoBotTret = Math.ceil(dt / 40); // 1 bao 40kg ~ 40m2 (2 lớp)
+
+                html = `
+                    <div class="bg-white p-3 rounded-xl border border-earth-200">
+                        <span class="text-xs text-concrete-600">Diện tích tường sơn:</span>
+                        <div class="text-lg font-bold text-earth-800">${dt} m²</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="bg-white p-3 rounded-xl border border-earth-200">
+                            <span class="text-xs text-concrete-600">Sơn Lót Kháng Kiềm:</span>
+                            <div class="text-base font-bold text-navyTrust-900">${thungLot} Thùng (18L)</div>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-earth-200">
+                            <span class="text-xs text-concrete-600">Sơn Phủ Màu:</span>
+                            <div class="text-base font-bold text-navyTrust-900">${thungPhu} Thùng (18L)</div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-earth-200">
+                        <span class="text-xs text-concrete-600">Bột Trét Tường (Mastic):</span>
+                        <div class="text-base font-bold text-earth-700">${baoBotTret} Bao (40kg)</div>
+                    </div>
+                `;
+                summaryText += `- Sơn Tường (${dt}m²)\n- Sơn lót: ${thungLot} thùng 18L\n- Sơn phủ: ${thungPhu} thùng 18L\n- Bột trét: ${baoBotTret} bao`;
+
+            } else if (activeCalcTab === 'betong') {
+                const mac = document.getElementById('betong-mac').value;
+                const volume = parseFloat(document.getElementById('betong-thetich').value) || 0;
+
+                // Định mức 1m3 bê tông
+                let xi = 320, cat = 0.48, da = 0.88, nuoc = 185; // M200
+                if (mac === 'M250') { xi = 360; cat = 0.46; da = 0.85; }
+                else if (mac === 'M300') { xi = 400; cat = 0.44; da = 0.84; }
+
+                const totalXiBao = Math.ceil((volume * xi) / 50);
+                const totalCat = (volume * cat).toFixed(2);
+                const totalDa = (volume * da).toFixed(2);
+                const totalNuoc = Math.round(volume * nuoc);
+
+                html = `
+                    <div class="bg-white p-3 rounded-xl border border-earth-200">
+                        <span class="text-xs text-concrete-600">Thể tích bê tông (${mac}):</span>
+                        <div class="text-lg font-bold text-earth-800">${volume} m³</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="bg-white p-3 rounded-xl border border-earth-200">
+                            <span class="text-xs text-concrete-600">Xi măng:</span>
+                            <div class="text-base font-bold text-earth-700">${totalXiBao} Bao (50kg)</div>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-earth-200">
+                            <span class="text-xs text-concrete-600">Cát vàng bê tông:</span>
+                            <div class="text-base font-bold text-navyTrust-900">${totalCat} m³</div>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-earth-200">
+                            <span class="text-xs text-concrete-600">Đá 1x2:</span>
+                            <div class="text-base font-bold text-navyTrust-900">${totalDa} m³</div>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-earth-200">
+                            <span class="text-xs text-concrete-600">Nước sạch:</span>
+                            <div class="text-base font-bold text-navyTrust-900">~ ${totalNuoc} Lít</div>
+                        </div>
+                    </div>
+                `;
+                summaryText += `- Bê Tông ${mac} (${volume}m3)\n- Xi măng: ${totalXiBao} bao\n- Cát vàng: ${totalCat} m3\n- Đá 1x2: ${totalDa} m3`;
+            }
+
+            resContainer.innerHTML = html;
+            currentEstimateText = encodeURIComponent(summaryText + "\n\nXin tư vấn báo giá giúp tôi!");
+        }
+
+        // Send Zalo Báo Giá Action
+        function sendZaloEstimate() {
+            window.open(`https://zalo.me/0977207878`, '_blank');
+        }
+
+        // Initialize Calculation on Load
+        window.onload = function() {
+            calculateMaterial();
+        };
+    // ================= HỆ THỐNG LƯU TRỮ VÀ XỬ LÝ BLOG =================
+
+// 1. Dữ liệu bài viết gốc sẵn có
+const defaultBlogPosts = [
+    {
+        id: 1,
+        title: "Cách Chọn Gạch Ốp Lát Chống Trơn Cho Nhà Tắm & Sân Vườn",
+        category: "vat-lieu",
+        categoryName: "Chọn vật liệu",
+        date: "15/10/2026",
+        author: "VLXD Hùng Vương",
+        image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+        summary: "Hướng dẫn lựa chọn loại gạch men, gạch granite có bề mặt nhám mờ, chống trơn trượt tối ưu cho không gian độ ẩm cao.",
+        content: `<p class="mb-4 text-stone-700 leading-relaxed">Chọn gạch cho các khu vực thường xuyên tiếp xúc với nước như nhà tắm, sân thượng hay sân vườn đòi hỏi phải ưu tiên tính an toàn lên hàng đầu. Dưới đây là những tiêu chí quan trọng khi chọn mua gạch tại VLXD Hùng Vương:</p>
+                  <h4 class="font-bold text-lg text-amber-900 mb-2">1. Chọn độ nhám bề mặt (R-Rating)</h4>
+                  <p class="mb-4 text-stone-700 leading-relaxed">Nên chọn các loại gạch men mờ (Matt), gạch viền nhám hoặc gạch granite có độ nhám đạt tiêu chuẩn từ R10 trở lên để hạn chế tối đa nguy cơ trượt ngã.</p>`
+    },
+    {
+        id: 2,
+        title: "Kinh Nghiệm Bảo Quản Xi Măng Đúng Cách Mùa Mưa Tại Miền Tây",
+        category: "kinh-nghiem",
+        categoryName: "Kinh nghiệm",
+        date: "08/10/2026",
+        author: "Kỹ sư Xây dựng",
+        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+        summary: "Thời tiết mùa mưa tại Vĩnh Long và miền Tây rất dễ làm xi măng bị vón cục. Mẹo xếp kho và kê pallet chuẩn.",
+        content: `<p class="mb-4 text-stone-700 leading-relaxed">Xi măng rất nhạy cảm với độ ẩm. Nếu không bảo quản đúng cách, bao xi măng sẽ bị chết, vón cục gây lãng phí lớn cho công trình.</p>`
+    }
+];
+
+// 2. Kiểm tra bộ nhớ trình duyệt (LocalStorage)
+let savedPosts = localStorage.getItem('hv_blog_posts');
+let blogPosts = savedPosts ? JSON.parse(savedPosts) : defaultBlogPosts;
+let currentCategory = 'all';
+
+// 3. Hàm Đóng/Mở Bảng Đăng Bài
+function toggleAdminPanel() {
+    const panel = document.getElementById('adminBlogPanel');
+    if (panel) {
+        panel.classList.toggle('hidden');
+        if (!panel.classList.contains('hidden')) {
+            panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+}
+
+// 4. Xử lý khi nhấn nút "Đăng Bài Ngay"
+function handleAddNewPost(e) {
+    e.preventDefault();
+
+    const title = document.getElementById('newTitle').value.trim();
+    const catVal = document.getElementById('newCategory').value.split('|');
+    const image = document.getElementById('newImage').value.trim();
+    const summary = document.getElementById('newSummary').value.trim();
+    const contentText = document.getElementById('newContent').value.trim();
+
+    // Tự động ngắt đoạn khi nhấn Enter xuống dòng
+    const formattedContent = contentText
+        .split('\n\n')
+        .map(p => `<p class="mb-4 text-stone-700 leading-relaxed">${p.replace(/\n/g, '<br>')}</p>`)
+        .join('');
+
+    const newPost = {
+        id: Date.now(),
+        title: title,
+        category: catVal[0],
+        categoryName: catVal[1],
+        date: new Date().toLocaleDateString('vi-VN'),
+        author: "VLXD Hùng Vương",
+        image: image,
+        summary: summary,
+        content: formattedContent
+    };
+
+    // Đưa bài mới lên đầu danh sách
+    blogPosts.unshift(newPost);
+
+    // Lưu vào bộ nhớ máy tính/trình duyệt
+    localStorage.setItem('hv_blog_posts', JSON.stringify(blogPosts));
+
+    // Cập nhật lại màn hình
+    filterBlogPosts();
+
+    // Xóa chữ trong ô nhập & ẩn form
+    e.target.reset();
+    alert('🎉 Đăng bài viết mới thành công!');
+    toggleAdminPanel();
+}
+
+// 5. Nút Xuất Mã Code để dán vĩnh viễn vào file nếu muốn
+function exportBlogData() {
+    const dataStr = "const defaultBlogPosts = " + JSON.stringify(blogPosts, null, 4) + ";";
+    navigator.clipboard.writeText(dataStr).then(() => {
+        alert("📋 Đã sao chép mã dữ liệu! Bạn có thể dán đè vào biến defaultBlogPosts trong file HTML để lưu vĩnh viễn.");
+    });
+}
+
+// ================= SỬ LÝ HIỂN THỊ VÀ THU GỌN BLOG =================
+const INITIAL_BLOG_LIMIT = 3; // Số lượng bài viết hiển thị mặc định
+let isBlogExpanded = false;   // Trạng thái mở rộng / thu gọn
+let currentFilteredPosts = []; // Luân chuyển danh sách bài viết sau khi lọc
+
+// 1. Hàm Render Bài Viết (Có giới hạn số lượng hiển thị)
+function renderBlogPosts(posts) {
+    const grid = document.getElementById('blogGrid');
+    const noResults = document.getElementById('noBlogResults');
+    const toggleContainer = document.getElementById('blogToggleContainer');
+    
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    currentFilteredPosts = posts;
+
+    if (posts.length === 0) {
+        if (noResults) noResults.classList.remove('hidden');
+        if (toggleContainer) toggleContainer.classList.add('hidden');
+        return;
+    } else {
+        if (noResults) noResults.classList.add('hidden');
+    }
+
+    // Xác định số lượng bài viết sẽ hiển thị dựa trên trạng thái Mở rộng / Thu gọn
+    const postsToDisplay = isBlogExpanded ? posts : posts.slice(0, INITIAL_BLOG_LIMIT);
+
+    postsToDisplay.forEach(post => {
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-lg transition-all flex flex-col cursor-pointer group animate-fade-in";
+        card.onclick = () => openBlogModal(post.id);
+
+        card.innerHTML = `
+            <div class="relative overflow-hidden h-48">
+                <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/800x450?text=VLXD+Hung+Vuong'">
+                <span class="absolute top-3 left-3 bg-amber-800 text-white text-xs px-3 py-1 rounded-full font-medium shadow-md">
+                    ${post.categoryName}
+                </span>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+                <div class="flex items-center text-xs text-stone-400 gap-3 mb-2">
+                    <span>📅 ${post.date}</span>
+                    <span>✍️ ${post.author}</span>
+                </div>
+                <h3 class="font-bold text-stone-900 text-lg group-hover:text-amber-700 transition line-clamp-2 mb-2">
+                    ${post.title}
+                </h3>
+                <p class="text-stone-600 text-sm line-clamp-3 mb-4 flex-grow">
+                    ${post.summary}
+                </p>
+                <div class="text-amber-700 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Đọc tiếp <span>→</span>
+                </div>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+
+    // Xử lý ẩn/hiện nút Xem thêm/Thu gọn
+    if (toggleContainer) {
+        if (posts.length > INITIAL_BLOG_LIMIT) {
+            toggleContainer.classList.remove('hidden');
+            updateToggleButtonUI(posts.length);
+        } else {
+            toggleContainer.classList.add('hidden');
+        }
+    }
+}
+
+// 2. Hàm chuyển đổi Mở rộng / Thu gọn
+function toggleBlogExpand() {
+    isBlogExpanded = !isBlogExpanded;
+    renderBlogPosts(currentFilteredPosts);
+
+    // Nếu thu gọn lại, cuộn mượt nhẹ lên đầu phần blog để người dùng dễ theo dõi
+    if (!isBlogExpanded) {
+        const blogSection = document.getElementById('blog');
+        if (blogSection) {
+            blogSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+}
+
+// 3. Cập nhật giao diện Nút bấm (Text & Icon)
+function updateToggleButtonUI(totalPosts) {
+    const btnText = document.getElementById('blogToggleText');
+    const btnIcon = document.getElementById('blogToggleIcon');
+
+    if (isBlogExpanded) {
+        if (btnText) btnText.textContent = "Thu gọn danh sách";
+        if (btnIcon) btnIcon.style.transform = "rotate(180deg)";
+    } else {
+        const hiddenCount = totalPosts - INITIAL_BLOG_LIMIT;
+        if (btnText) btnText.textContent = `Xem thêm (${hiddenCount} bài viết)`;
+        if (btnIcon) btnIcon.style.transform = "rotate(0deg)";
+    }
+}
+
+// 4. Lọc bài viết (Reset trạng thái mở rộng khi tìm kiếm hoặc đổi danh mục)
+function filterBlogPosts() {
+    const input = document.getElementById('blogSearchInput');
+    const keyword = input ? input.value.toLowerCase().trim() : '';
+
+    const filtered = blogPosts.filter(post => {
+        const matchCategory = (currentCategory === 'all') || (post.category === currentCategory);
+        const matchKeyword = post.title.toLowerCase().includes(keyword) ||
+                             post.summary.toLowerCase().includes(keyword) ||
+                             post.categoryName.toLowerCase().includes(keyword);
+        return matchCategory && matchKeyword;
+    });
+
+    // Reset về trạng thái thu gọn mỗi khi người dùng tìm kiếm/lọc
+    isBlogExpanded = false;
+    renderBlogPosts(filtered);
+}
+
+// 7. Lọc theo danh mục & Tìm kiếm từ khóa
+function filterBlogCategory(cat) {
+    currentCategory = cat;
+    document.querySelectorAll('.blog-cat-btn').forEach(btn => {
+        btn.classList.remove('bg-amber-700', 'text-white', 'active');
+        btn.classList.add('bg-stone-200', 'text-stone-700');
+    });
+    if (window.event && window.event.target) {
+        window.event.target.classList.remove('bg-stone-200', 'text-stone-700');
+        window.event.target.classList.add('bg-amber-700', 'text-white', 'active');
+    }
+    filterBlogPosts();
+}
+
+function filterBlogPosts() {
+    const input = document.getElementById('blogSearchInput');
+    const keyword = input ? input.value.toLowerCase().trim() : '';
+
+    const filtered = blogPosts.filter(post => {
+        const matchCategory = (currentCategory === 'all') || (post.category === currentCategory);
+        const matchKeyword = post.title.toLowerCase().includes(keyword) ||
+                             post.summary.toLowerCase().includes(keyword) ||
+                             post.categoryName.toLowerCase().includes(keyword);
+        return matchCategory && matchKeyword;
+    });
+
+    renderBlogPosts(filtered);
+}
+
+// 8. Xem chi tiết bài viết trong Cửa sổ Modal
+function openBlogModal(id) {
+    const post = blogPosts.find(p => p.id === id);
+    if (!post) return;
+
+    const modalContent = document.getElementById('blogModalContent');
+    modalContent.innerHTML = `
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-3 py-1 rounded-full font-bold mb-3">
+            ${post.categoryName}
+        </span>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-stone-900 mb-3">${post.title}</h2>
+        <div class="flex items-center text-xs text-stone-400 gap-4 mb-6 border-b pb-4">
+            <span>Ngày đăng: ${post.date}</span>
+            <span>Tác giả: ${post.author}</span>
+        </div>
+        <img src="${post.image}" alt="${post.title}" class="w-full h-64 md:h-80 object-cover rounded-xl mb-6">
+        <div class="prose max-w-none">
+            ${post.content}
+        </div>
+        <div class="mt-8 pt-6 border-t border-stone-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <span class="text-sm text-stone-500">Cần tư vấn vật liệu thi công?</span>
+            <a href="https://zalo.me/0977207878" target="_blank" class="bg-amber-700 hover:bg-amber-800 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition">
+                💬 Liên hệ tư vấn ngay qua Zalo
+            </a>
+        </div>
+    `;
+
+    document.getElementById('blogModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeBlogModal() {
+    document.getElementById('blogModal').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+// Chạy khởi tạo danh sách bài viết khi trang tải xong
+document.addEventListener('DOMContentLoaded', () => {
+    renderBlogPosts(blogPosts);
+});
+	// ================= MỞ BẢNG QUẢN TRỊ BẰNG PHÍM TẮT BÍ MẬT =================
+// Bấm tổ hợp phím Ctrl + Shift + A để bật/tắt khung đăng bài
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.shiftKey && (event.key === 'O' || event.key === 'o')) {
+        event.preventDefault();
+        toggleAdminPanel();
+    }
+});
+	</script>
+</body>
+</html>
