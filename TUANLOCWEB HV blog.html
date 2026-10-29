@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CÔNG TY TNHH VẬT LIỆU XÂY DỰNG HÙNG VƯƠNG | Vĩnh Long & Miền Nam</title>
+    <title>VLXD Hùng Vương - Vĩnh Long</title>
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -13,6 +14,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
+    <!-- Firebase SDK (Version 10.8.0 Compat) -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -83,7 +88,7 @@
     <div class="bg-navyTrust-900 text-white text-xs sm:text-sm py-2 px-4 shadow-md">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-sand-400"></i> 136/2C Đồng Văn Cống, P. An Hội, Vĩnh Long (Bến Tre) </span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-sand-400"></i> 136/2C Đồng Văn Cống, P. An Hội, Vĩnh Long</span>
                 <span class="hidden lg:inline-block">|</span>
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-truck-fast text-sand-400"></i> Cung ứng nhanh Vĩnh Long & Toàn Miền Nam</span>
             </div>
@@ -108,8 +113,8 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Brand Logo -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-earth-700 to-earth-500 flex items-center justify-center text-white text-2xl font-black shadow-lg transform group-hover:scale-105 transition">
-                        TL
+                    <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white shadow-md border border-earth-200 transform group-hover:scale-105 transition">
+                        <img src="https://cdn.phototourl.com/member/2026-10-29-80a60434-9125-43ee-9d8d-f3fdd7587687.png" alt="Logo VLXD Hùng Vương" class="w-full h-full object-contain p-1" onerror="this.src='https://via.placeholder.com/150?text=HV'">
                     </div>
                     <div>
                         <span class="block text-xl font-extrabold text-navyTrust-900 tracking-tight group-hover:text-earth-600 transition">HÙNG VƯƠNG</span>
@@ -124,7 +129,7 @@
                     <a href="#calculator" class="text-earth-600 font-bold hover:text-earth-800 transition py-2 flex items-center gap-1">
                         <i class="fa-solid fa-calculator text-actionOrange-500"></i> Bộ Tính Vật Liệu
                     </a>
-					<a href="#blog" class="text-stone-700 hover:text-amber-700 font-medium transition">Kinh Nghiệm & Blog</a>
+                    <a href="#blog" class="text-stone-700 hover:text-amber-700 font-medium transition">Kinh Nghiệm & Blog</a>
                     <a href="#services" class="hover:text-earth-600 transition py-2 border-b-2 border-transparent hover:border-earth-600">Dịch Vụ</a>
                     <a href="#contact" class="hover:text-earth-600 transition py-2 border-b-2 border-transparent hover:border-earth-600">Liên Hệ</a>
                 </div>
@@ -154,9 +159,9 @@
             <a href="#products" class="block py-2 text-concrete-800 hover:text-earth-600 font-medium">Sản Phẩm & Báo Giá</a>
             <a href="#calculator" class="block py-2 text-earth-600 font-bold bg-earth-50 px-3 rounded-md"><i class="fa-solid fa-calculator text-actionOrange-500 mr-2"></i>Bộ Công Cụ Tính Vật Liệu</a>
             <a href="#blog" class="block py-2 text-concrete-800 hover:text-earth-600 font-medium transition">Kinh Nghiệm & Blog</a>
-			<a href="#services" class="block py-2 text-concrete-800 hover:text-earth-600 font-medium">Dịch Vụ Vận Chuyển</a>
+            <a href="#services" class="block py-2 text-concrete-800 hover:text-earth-600 font-medium">Dịch Vụ Vận Chuyển</a>
             <a href="#contact" class="block py-2 text-concrete-800 hover:text-earth-600 font-medium">Liên Hệ & Bản Đồ</a>
-		   <div class="pt-2 flex flex-col gap-2">
+            <div class="pt-2 flex flex-col gap-2">
                 <a href="tel:0977207878" class="w-full text-center bg-earth-600 text-white font-bold py-2 rounded-lg"><i class="fa-solid fa-phone mr-2"></i>Gọi 0977.207.878</a>
                 <a href="https://maps.app.goo.gl/PYNPEWaqqfr5iVPA9" target="_blank" class="w-full text-center border border-earth-600 text-earth-700 font-medium py-2 rounded-lg"><i class="fa-solid fa-map-marked-alt mr-2"></i>Xem Google Maps</a>
             </div>
@@ -234,7 +239,7 @@
                         <span class="w-8 h-0.5 bg-earth-600"></span> Về Chúng Tôi
                     </div>
                     <h2 class="text-2xl sm:text-4xl font-extrabold text-navyTrust-900 leading-tight">
-                        VẬT LIỆU XÂY DỰNG & TRANG TRÍ NỘI THẤT HÙNG VƯƠNG
+                        CÔNG TY TNHH VẬT LIỆU XÂY DỰNG HÙNG VƯƠNG
                     </h2>
                     <p class="text-concrete-600 leading-relaxed">
                         Tự hào là đơn vị uy tín hàng đầu tại <strong>Tỉnh Vĩnh Long và khu vực Miền Nam</strong> trong lĩnh vực phân phối vật liệu xây dựng thô và hoàn thiện. Với phương châm <em class="text-earth-700 font-semibold">"Trường tồn cùng mọi công trình"</em>, chúng tôi cam kết mang đến giải pháp vật liệu toàn diện, đúng tiến độ và tối ưu chi phí cho gia đình & đối tác.
@@ -244,7 +249,7 @@
                         <div class="bg-earth-50 p-4 rounded-xl border border-earth-200">
                             <i class="fa-solid fa-map-location-dot text-2xl text-earth-600 mb-2"></i>
                             <h4 class="font-bold text-navyTrust-900">Địa chỉ rõ ràng</h4>
-                            <p class="text-xs text-concrete-600 mt-1">136/2C Đồng Văn Cống, An Hội, Vĩnh Long (Bến Tre) </p>
+                            <p class="text-xs text-concrete-600 mt-1">136/2C Đồng Văn Cống, An Hội, Vĩnh Long</p>
                         </div>
                         <div class="bg-earth-50 p-4 rounded-xl border border-earth-200">
                             <i class="fa-solid fa-globe text-2xl text-navyTrust-600 mb-2"></i>
@@ -478,7 +483,7 @@
                             <!-- TAB 1: XÂY TƯỜNG -->
                             <div id="calc-form-tuong" class="calc-form space-y-4">
                                 <h3 class="text-lg font-bold text-earth-800 border-b pb-2 flex items-center gap-2">
-                                    <i class="fa-solid fa-wall text-earth-600"></i> Tính Số Lượng Gạch, Cát, Xi Măng Xây Tường
+                                    <i class="fa-solid fa-cubes-stacked text-earth-600"></i> Tính Số Lượng Gạch, Cát, Xi Măng Xây Tường
                                 </h3>
                                 <div class="grid sm:grid-cols-2 gap-4">
                                     <div>
@@ -620,8 +625,8 @@
                                 <button onclick="sendZaloEstimate()" class="w-full bg-ecoGreen-600 hover:bg-ecoGreen-700 text-white font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2 text-xs sm:text-sm shadow">
                                     <i class="fa-solid fa-paper-plane"></i> Gửi Zalo Báo Giá Nhanh HÙNG VƯƠNG
                                 </button>
-                                <button onclick="window.print()" class="w-full bg-white hover:bg-gray-100 text-concrete-800 font-semibold py-2 rounded-xl transition border border-gray-300 text-xs flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-print"></i> In Bảng Dự Toán
+                                <button onclick="printProfessionalEstimate()" class="w-full bg-white hover:bg-gray-100 text-concrete-800 font-semibold py-2 rounded-xl transition border border-gray-300 text-xs flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-print"></i> In Bảng Dự Toán Chuyên Nghiệp (PDF)
                                 </button>
                             </div>
 
@@ -719,136 +724,138 @@
         </div>
     </section>
 	
-	<!-- ================= SECTION BLOG & KIẾN THỨC ================= -->
-	<!-- Khung Đăng Bài Dành Cho Quản Trị Viên (Mặc định ẩn) -->
-<div id="adminBlogPanel" class="hidden mb-12 bg-stone-900 text-white p-6 md:p-8 rounded-2xl shadow-2xl border border-stone-700">
-    <div class="flex justify-between items-center mb-6 pb-4 border-b border-stone-800">
-        <h3 class="text-xl font-bold text-amber-400 flex items-center gap-2">
-            <span>✍️</span> Bảng Quản Trị - Đăng Bài Viết Mới
-        </h3>
-        <button onclick="toggleAdminPanel()" class="text-stone-400 hover:text-white text-sm bg-stone-800 px-3 py-1.5 rounded-lg transition">
-            ✕ Đóng Form
-        </button>
-    </div>
-
-    <form onsubmit="handleAddNewPost(event)" class="space-y-5">
-        <div>
-            <label class="block text-sm font-semibold mb-1.5 text-stone-200">Tiêu đề bài viết <span class="text-red-400">*</span></label>
-            <input type="text" id="newTitle" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Ví dụ: Báo giá xi măng mới nhất tháng này tại Vĩnh Long...">
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-                <label class="block text-sm font-semibold mb-1.5 text-stone-200">Danh mục <span class="text-red-400">*</span></label>
-                <select id="newCategory" class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm">
-                    <option value="vat-lieu|Chọn vật liệu">Chọn vật liệu</option>
-                    <option value="kinh-nghiem|Kinh nghiệm">Kinh nghiệm xây dựng</option>
-                    <option value="phong-thuy|Phong thủy">Phong thủy & Thiết kế</option>
-                </select>
-            </div>
-            <div>
-                <label class="block text-sm font-semibold mb-1.5 text-stone-200">Link Hình Ảnh (URL) <span class="text-red-400">*</span></label>
-                <input type="url" id="newImage" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Dán link ảnh từ Facebook/Unsplash/Imgur...">
-            </div>
-        </div>
-
-        <div>
-            <label class="block text-sm font-semibold mb-1.5 text-stone-200">Tóm tắt ngắn (Hiển thị ngoài thẻ card) <span class="text-red-400">*</span></label>
-            <textarea id="newSummary" rows="2" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Mô tả tóm tắt nội dung trong 2 - 3 câu ngắn gọn..."></textarea>
-        </div>
-
-        <div>
-            <label class="block text-sm font-semibold mb-1.5 text-stone-200">Nội dung chi tiết bài viết <span class="text-red-400">*</span></label>
-            <textarea id="newContent" rows="6" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Nhập đầy đủ nội dung bài viết. Xuống dòng để tạo đoạn văn mới..."></textarea>
-        </div>
-
-        <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
-            <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition flex items-center gap-2 shadow-lg">
-                <span>🚀</span> Đăng Bài Ngay
-            </button>
-            <button type="button" onclick="exportBlogData()" class="bg-stone-800 hover:bg-stone-700 text-amber-300 border border-amber-500/30 font-semibold px-4 py-2.5 rounded-xl text-xs transition">
-                📋 Xuất mã Code lưu vĩnh viễn
-            </button>
-        </div>
-    </form>
-</div>
-
-
-
-        <section id="blog" class="py-16 bg-stone-100 border-t border-stone-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Title -->
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-amber-700 font-bold uppercase tracking-wider text-sm">Góc Chia Sẻ & Tư Vấn</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-stone-900 mt-2">
-                        Kiến Thức & Kinh Nghiệm Xây Dựng
-                    </h2>
-                    <div class="w-24 h-1 bg-amber-600 mx-auto mt-4 rounded-full"></div>
-                    <p class="text-stone-600 mt-4">
-                        Cập nhật các bài viết hướng dẫn chọn vật liệu, kinh nghiệm thi công và xu hướng kiến trúc mới nhất từ VLXD Hùng Vương.
-                    </p>
-                </div>
-
-                <!-- Search & Filter Bar -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm mb-10 border border-stone-200">
-                    <div class="flex flex-col md:flex-row gap-4 justify-between items-center">
-                        <!-- Search Input -->
-                        <div class="relative w-full md:w-96">
-                            <input type="text" id="blogSearchInput" onkeyup="filterBlogPosts()" 
-                                   placeholder="Tìm kiếm bài viết (ví dụ: gạch, xi măng, sơn...)..." 
-                                   class="w-full pl-11 pr-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-transparent text-sm">
-                            <svg class="w-5 h-5 text-stone-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                            </svg>
-                        </div>
-
-                        <!-- Category Filters -->
-                        <div class="flex flex-wrap gap-2 w-full md:w-auto justify-start md:justify-end" id="blogCategoryFilters">
-                            <button onclick="filterBlogCategory('all')" class="blog-cat-btn active px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-amber-700 text-white">Tất cả</button>
-                            <button onclick="filterBlogCategory('kinh-nghiem')" class="blog-cat-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-stone-200 text-stone-700 hover:bg-stone-300">Kinh nghiệm</button>
-                            <button onclick="filterBlogCategory('vat-lieu')" class="blog-cat-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-stone-200 text-stone-700 hover:bg-stone-300">Chọn vật liệu</button>
-                            <button onclick="filterBlogCategory('phong-thuy')" class="blog-cat-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-stone-200 text-stone-700 hover:bg-stone-300">Phong thủy</button>
-                        </div>
+    <!-- ================= SECTION BLOG & KIẾN THỨC ================= -->
+    <section id="blog" class="py-16 bg-stone-100 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Khung Đăng Bài Dành Cho Quản Trị Viên (Mặc định ẩn) -->
+            <div id="adminBlogPanel" class="hidden mb-12 bg-stone-900 text-white p-6 md:p-8 rounded-2xl shadow-2xl border border-stone-700">
+                <div class="flex justify-between items-center mb-6 pb-4 border-b border-stone-800">
+                    <h3 class="text-xl font-bold text-amber-400 flex items-center gap-2">
+                        <span>✍️</span> Bảng Quản Trị - Đăng Bài Viết Mới (Cloud Database)
+                    </h3>
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="logoutAdmin()" class="text-red-400 hover:text-red-300 text-xs bg-stone-800 border border-red-900/50 px-3 py-1.5 rounded-lg transition">
+                            🔒 Đăng Xuất
+                        </button>
+                        <button type="button" onclick="toggleAdminPanel()" class="text-stone-400 hover:text-white text-sm bg-stone-800 px-3 py-1.5 rounded-lg transition">
+                            ✕ Đóng Form
+                        </button>
                     </div>
                 </div>
 
-                <!-- Blog Grid -->
-                <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Bài viết được render tự động bằng Javascript -->
-                </div>
-				<!-- Nút Bấm Mở Rộng / Thu Gọn Danh Sách Bài Viết -->
-<div id="blogToggleContainer" class="text-center mt-12 hidden">
-    <button id="blogToggleBtn" onclick="toggleBlogExpand()" class="inline-flex items-center gap-2 bg-stone-200 hover:bg-amber-800 hover:text-white text-stone-800 font-bold px-8 py-3.5 rounded-xl transition-all shadow-sm">
-        <span id="blogToggleText">Xem thêm bài viết</span>
-        <svg id="blogToggleIcon" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-        </svg>
-    </button>
-</div>
+                <form onsubmit="handleAddNewPost(event)" class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-semibold mb-1.5 text-stone-200">Tiêu đề bài viết <span class="text-red-400">*</span></label>
+                        <input type="text" id="newTitle" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Ví dụ: Báo giá xi măng mới nhất tháng này tại Vĩnh Long...">
+                    </div>
 
-                <!-- No Results Message -->
-                <div id="noBlogResults" class="hidden text-center py-12">
-                    <svg class="w-16 h-16 text-stone-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <p class="text-stone-500 font-medium">Không tìm thấy bài viết phù hợp với từ khóa của bạn.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold mb-1.5 text-stone-200">Danh mục <span class="text-red-400">*</span></label>
+                            <select id="newCategory" class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm">
+                                <option value="vat-lieu|Chọn vật liệu">Chọn vật liệu</option>
+                                <option value="kinh-nghiem|Kinh nghiệm">Kinh nghiệm xây dựng</option>
+                                <option value="phong-thuy|Phong thủy">Phong thủy & Thiết kế</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-1.5 text-stone-200">Link Hình Ảnh (URL) <span class="text-red-400">*</span></label>
+                            <input type="url" id="newImage" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Dán link ảnh từ Unsplash/Imgur/Facebook...">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-1.5 text-stone-200">Tóm tắt ngắn (Hiển thị ngoài thẻ card) <span class="text-red-400">*</span></label>
+                        <textarea id="newSummary" rows="2" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Mô tả tóm tắt nội dung trong 2 - 3 câu ngắn gọn..."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-1.5 text-stone-200">Nội dung chi tiết bài viết <span class="text-red-400">*</span></label>
+                        <textarea id="newContent" rows="6" required class="w-full px-4 py-2.5 rounded-xl bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-amber-500 text-sm" placeholder="Nhập đầy đủ nội dung bài viết. Xuống dòng để tạo đoạn văn mới..."></textarea>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                        <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition flex items-center gap-2 shadow-lg">
+                            <span>🚀</span> Đăng Bài Viết Lên Cloud
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Section Title -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-700 font-bold uppercase tracking-wider text-sm">Góc Chia Sẻ & Tư Vấn</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-stone-900 mt-2">
+                    Kiến Thức & Kinh Nghiệm Xây Dựng
+                </h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto mt-4 rounded-full"></div>
+                <p class="text-stone-600 mt-4">
+                    Cập nhật các bài viết hướng dẫn chọn vật liệu, kinh nghiệm thi công và xu hướng kiến trúc mới nhất từ VLXD Hùng Vương.
+                </p>
+            </div>
+
+            <!-- Search & Filter Bar -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm mb-10 border border-stone-200">
+                <div class="flex flex-col md:flex-row gap-4 justify-between items-center">
+                    <!-- Search Input -->
+                    <div class="relative w-full md:w-96">
+                        <input type="text" id="blogSearchInput" onkeyup="filterBlogPosts()" 
+                               placeholder="Tìm kiếm bài viết (ví dụ: gạch, xi măng, sơn...)..." 
+                               class="w-full pl-11 pr-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-transparent text-sm">
+                        <svg class="w-5 h-5 text-stone-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Category Filters -->
+                    <div class="flex flex-wrap gap-2 w-full md:w-auto justify-start md:justify-end" id="blogCategoryFilters">
+                        <button onclick="filterBlogCategory('all')" class="blog-cat-btn active px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-amber-700 text-white">Tất cả</button>
+                        <button onclick="filterBlogCategory('kinh-nghiem')" class="blog-cat-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-stone-200 text-stone-700 hover:bg-stone-300">Kinh nghiệm</button>
+                        <button onclick="filterBlogCategory('vat-lieu')" class="blog-cat-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-stone-200 text-stone-700 hover:bg-stone-300">Chọn vật liệu</button>
+                        <button onclick="filterBlogCategory('phong-thuy')" class="blog-cat-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-stone-200 text-stone-700 hover:bg-stone-300">Phong thủy</button>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Blog Modal Detail -->
-        <div id="blogModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
-            <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 shadow-2xl relative">
-                <button onclick="closeBlogModal()" class="absolute top-4 right-4 bg-stone-100 text-stone-500 hover:text-stone-900 rounded-full p-2 transition">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            <!-- Blog Grid -->
+            <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Bài viết được render tự động bằng Javascript -->
+            </div>
+
+            <!-- Nút Bấm Mở Rộng / Thu Gọn Danh Sách Bài Viết -->
+            <div id="blogToggleContainer" class="text-center mt-12 hidden">
+                <button id="blogToggleBtn" onclick="toggleBlogExpand()" class="inline-flex items-center gap-2 bg-stone-200 hover:bg-amber-800 hover:text-white text-stone-800 font-bold px-8 py-3.5 rounded-xl transition-all shadow-sm">
+                    <span id="blogToggleText">Xem thêm bài viết</span>
+                    <svg id="blogToggleIcon" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
-                <div id="blogModalContent">
-                    <!-- Nội dung bài viết chi tiết -->
-                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noBlogResults" class="hidden text-center py-12">
+                <svg class="w-16 h-16 text-stone-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <p class="text-stone-500 font-medium">Không tìm thấy bài viết phù hợp với từ khóa của bạn.</p>
             </div>
         </div>
+    </section>
+
+    <!-- Blog Modal Detail -->
+    <div id="blogModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 shadow-2xl relative">
+            <button onclick="closeBlogModal()" class="absolute top-4 right-4 bg-stone-100 text-stone-500 hover:text-stone-900 rounded-full p-2 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div id="blogModalContent">
+                <!-- Nội dung bài viết chi tiết -->
+            </div>
+        </div>
+    </div>
 		
     <!-- CONTACT & GOOGLE MAPS SECTION -->
     <section id="contact" class="py-16 bg-white">
@@ -899,7 +906,7 @@
                                 </div>
                             </div>
                             <a href="https://www.facebook.com/vlxdhungvuong2001" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-800 hover:bg-blue-50 font-bold text-xs px-3 py-2 rounded-lg transition shadow">
-                                Truỵ Cập <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Truy Cập <i class="fa-solid fa-arrow-right ml-1"></i>
                             </a>
                         </div>
                     </div>
@@ -934,14 +941,13 @@
     </section>
 
     <!-- FOOTER -->
-
     <footer class="bg-navyTrust-900 text-gray-300 pt-12 pb-6 border-t-4 border-earth-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-8 text-sm">
                 
                 <div class="space-y-3 md:col-span-1">
                     <div class="flex items-center gap-2">
-                        <div class="w-9 h-9 rounded bg-earth-600 flex items-center justify-center text-white font-bold">TL</div>
+                        <div class="w-9 h-9 rounded bg-earth-600 flex items-center justify-center text-white font-bold">HV</div>
                         <span class="font-extrabold text-white text-base">VLXD HÙNG VƯƠNG</span>
                     </div>
                     <p class="text-xs text-gray-400 leading-relaxed">
@@ -1008,16 +1014,445 @@
         </div>
     </footer>
 
+    <!-- ================= HỘP THOẠI POPUP NHẬP MẬT KHẨU BẢO MẬT ================= -->
+    <div id="adminPasswordModal" class="fixed inset-0 bg-stone-900/70 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4 transition-all duration-300">
+        <div class="bg-white rounded-2xl p-6 md:p-8 max-w-md w-full shadow-2xl border border-stone-200 transform transition-all">
+            <div class="text-center mb-6">
+                <div class="w-14 h-14 bg-amber-100 text-amber-800 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl shadow-inner">
+                    🔒
+                </div>
+                <h3 class="text-xl font-extrabold text-stone-900">Xác Nhận Quyền Quản Trị</h3>
+                <p class="text-xs text-stone-500 mt-1">Vui lòng nhập mật khẩu để mở bảng đăng bài viết mới</p>
+            </div>
+
+            <form onsubmit="verifyAdminPassword(event)">
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-2">Mật khẩu quản trị</label>
+                    <input type="password" id="adminPasswordInput" placeholder="••••••••" required
+                        class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:ring-2 focus:ring-amber-700 focus:border-amber-700 outline-none text-stone-800 transition">
+                    <p id="passwordErrorMsg" class="text-xs text-red-600 mt-2 font-medium hidden">❌ Mật khẩu không chính xác!</p>
+                </div>
+
+                <div class="flex gap-3">
+                    <button type="button" onclick="closePasswordModal()" 
+                        class="w-1/2 py-3 bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold rounded-xl text-sm transition">
+                        Hủy bỏ
+                    </button>
+                    <button type="submit" 
+                        class="w-1/2 py-3 bg-amber-800 hover:bg-amber-900 text-white font-bold rounded-xl text-sm transition shadow-md">
+                        Xác nhận
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        // ================= KẾT NỐI FIREBASE DATABASE =================
+        const firebaseConfig = {
+                apiKey: "AIzaSyA3hPYGYnKT1KkRRdMlj0qq2zqTaIym-2s",
+                authDomain: "tuanlocltd2001.firebaseapp.com",
+                projectId: "tuanlocltd2001",
+                storageBucket: "tuanlocltd2001.firebasestorage.app",
+                messagingSenderId: "947609919854",
+                appId: "1:947609919854:web:42e4cfac057d944e72e17f",
+                measurementId: "G-GWZRCY706L"
+        };
+
+        let db = null;
+        const isFirebaseConfigured = firebaseConfig.apiKey !== "YOUR_API_KEY_HERE" && firebaseConfig.projectId !== "your-project-id";
+
+        if (isFirebaseConfigured) {
+            try {
+                firebase.initializeApp(firebaseConfig);
+                db = firebase.firestore();
+            } catch (err) {
+                console.warn("Lỗi khởi tạo Firebase, chuyển sang chế độ dữ liệu cục bộ:", err);
+            }
+        }
+
+        // ================= QUẢN LÝ PHIÊN ĐĂNG NHẬP & BẢO MẬT =================
+        function isAdminAuthenticated() {
+            return sessionStorage.getItem('hv_admin_logged_in') === 'true';
+        }
+
+        // Phím tắt bí mật: Ctrl + Shift + K
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.shiftKey && (event.key === 'K' || event.key === 'k' || event.code === 'KeyK')) {
+                event.preventDefault();
+                
+                const panel = document.getElementById('adminBlogPanel');
+                
+                // Nếu form đang hiện -> Ẩn form đi
+                if (panel && !panel.classList.contains('hidden')) {
+                    panel.classList.add('hidden');
+                    return;
+                }
+
+                // Nếu đã xác thực trong phiên làm việc -> Mở thẳng form không đòi mật khẩu
+                if (isAdminAuthenticated()) {
+                    if (panel) {
+                        panel.classList.remove('hidden');
+                        panel.scrollIntoView({ behavior: 'smooth' });
+                    }
+                } else {
+                    // Chưa đăng nhập -> Mở Popup nhập mật khẩu
+                    openPasswordModal();
+                }
+            }
         });
 
-        // Product Category Filtering
+        function openPasswordModal() {
+            const modal = document.getElementById('adminPasswordModal');
+            const input = document.getElementById('adminPasswordInput');
+            const errorMsg = document.getElementById('passwordErrorMsg');
+            
+            if (modal) {
+                modal.classList.remove('hidden');
+                if (errorMsg) errorMsg.classList.add('hidden');
+                if (input) {
+                    input.value = '';
+                    setTimeout(() => input.focus(), 150);
+                }
+            }
+        }
+
+        function closePasswordModal() {
+            const modal = document.getElementById('adminPasswordModal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        function verifyAdminPassword(e) {
+            e.preventDefault();
+            const input = document.getElementById('adminPasswordInput');
+            const errorMsg = document.getElementById('passwordErrorMsg');
+            const panel = document.getElementById('adminBlogPanel');
+
+            const ADMIN_PASSWORD = "hungvuong2001";
+
+            if (input && input.value === ADMIN_PASSWORD) {
+                // Lưu trạng thái đăng nhập cho cả phiên làm việc
+                sessionStorage.setItem('hv_admin_logged_in', 'true');
+                
+                closePasswordModal();
+                if (panel) {
+                    panel.classList.remove('hidden');
+                    panel.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                if (errorMsg) errorMsg.classList.remove('hidden');
+                if (input) {
+                    input.value = '';
+                    input.focus();
+                }
+            }
+        }
+
+        function logoutAdmin() {
+            sessionStorage.removeItem('hv_admin_logged_in');
+            toggleAdminPanel();
+            alert("🔒 Đã đăng xuất khỏi phiên quản trị!");
+        }
+
+        function toggleAdminPanel() {
+            const panel = document.getElementById('adminBlogPanel');
+            if (panel) panel.classList.add('hidden');
+        }
+
+        // ================= DỮ LIỆU & QUẢN LÝ BLOG ONLINE / LOCAL =================
+        const defaultBlogPosts = [
+            {
+                id: "1",
+                title: "Cách Chọn Gạch Ốp Lát Chống Trơn Cho Nhà Tắm & Sân Vườn",
+                category: "vat-lieu",
+                categoryName: "Chọn vật liệu",
+                date: "15/10/2026",
+                author: "VLXD Hùng Vương",
+                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+                summary: "Hướng dẫn lựa chọn loại gạch men, gạch granite có bề mặt nhám mờ, chống trơn trượt tối ưu cho không gian độ ẩm cao.",
+                content: `<p class="mb-4 text-stone-700 leading-relaxed">Chọn gạch cho các khu vực thường xuyên tiếp xúc với nước như nhà tắm, sân thượng hay sân vườn đòi hỏi phải ưu tiên tính an toàn lên hàng đầu. Dưới đây là những tiêu chí quan trọng khi chọn mua gạch tại VLXD Hùng Vương:</p>
+                          <h4 class="font-bold text-lg text-amber-900 mb-2">1. Chọn độ nhám bề mặt (R-Rating)</h4>
+                          <p class="mb-4 text-stone-700 leading-relaxed">Nên chọn các loại gạch men mờ (Matt), gạch viền nhám hoặc gạch granite có độ nhám đạt tiêu chuẩn từ R10 trở lên để hạn chế tối đa nguy cơ trượt ngã.</p>`
+            },
+            {
+                id: "2",
+                title: "Kinh Nghiệm Bảo Quản Xi Măng Đúng Cách Mùa Mưa Tại Miền Tây",
+                category: "kinh-nghiem",
+                categoryName: "Kinh nghiệm",
+                date: "08/10/2026",
+                author: "Kỹ sư Xây dựng",
+                image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+                summary: "Thời tiết mùa mưa tại Vĩnh Long và miền Tây rất dễ làm xi măng bị vón cục. Mẹo xếp kho và kê pallet chuẩn.",
+                content: `<p class="mb-4 text-stone-700 leading-relaxed">Xi măng rất nhạy cảm với độ ẩm. Nếu không bảo quản đúng cách, bao xi măng sẽ bị chết, vón cục gây lãng phí lớn cho công trình.</p>`
+            }
+        ];
+
+        let blogPosts = [];
+        let currentCategory = 'all';
+        const INITIAL_BLOG_LIMIT = 3;
+        let isBlogExpanded = false;
+        let currentFilteredPosts = [];
+
+        function fetchPostsFromDatabase() {
+            if (db && isFirebaseConfigured) {
+                db.collection("blog_posts").orderBy("createdAt", "desc").get()
+                    .then((querySnapshot) => {
+                        blogPosts = [];
+                        querySnapshot.forEach((doc) => {
+                            blogPosts.push({ id: doc.id, ...doc.data() });
+                        });
+                        if (blogPosts.length === 0) blogPosts = defaultBlogPosts;
+                        filterBlogPosts();
+                    })
+                    .catch((error) => {
+                        console.warn("Chuyển sang lưu trữ LocalStorage do chưa bật API Firebase:", error);
+                        loadLocalPosts();
+                    });
+            } else {
+                loadLocalPosts();
+            }
+        }
+
+        function loadLocalPosts() {
+            const saved = localStorage.getItem('hv_blog_posts');
+            blogPosts = saved ? JSON.parse(saved) : defaultBlogPosts;
+            filterBlogPosts();
+        }
+
+        function handleAddNewPost(e) {
+            e.preventDefault();
+
+            const title = document.getElementById('newTitle').value.trim();
+            const catVal = document.getElementById('newCategory').value.split('|');
+            const image = document.getElementById('newImage').value.trim();
+            const summary = document.getElementById('newSummary').value.trim();
+            const contentText = document.getElementById('newContent').value.trim();
+
+            const formattedContent = contentText
+                .split('\n\n')
+                .map(p => `<p class="mb-4 text-stone-700 leading-relaxed">${p.replace(/\n/g, '<br>')}</p>`)
+                .join('');
+
+            const newPostData = {
+                title: title,
+                category: catVal[0],
+                categoryName: catVal[1],
+                date: new Date().toLocaleDateString('vi-VN'),
+                author: "VLXD Hùng Vương",
+                image: image,
+                summary: summary,
+                content: formattedContent,
+                createdAt: (window.firebase && firebase.firestore) ? firebase.firestore.FieldValue.serverTimestamp() : new Date()
+            };
+
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = "⏳ Đang lưu...";
+            submitBtn.disabled = true;
+
+            const formElement = e.target;
+
+            if (db && isFirebaseConfigured) {
+                db.collection("blog_posts").add(newPostData)
+                    .then(() => {
+                        alert('🎉 Đăng bài viết mới thành công lên Cloud Firebase!');
+                        formElement.reset(); // Xóa sạch ô nhập liệu để nhập bài tiếp
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        
+                        // Giữ nguyên Form và cuộn lên đầu để tiện gõ bài tiếp theo
+                        const panel = document.getElementById('adminBlogPanel');
+                        if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+
+                        fetchPostsFromDatabase();
+                    })
+                    .catch((err) => {
+                        alert('⚠️ Chưa thể gửi lên Cloud. Bài viết đã được lưu tạm vào trình duyệt máy tính của bạn!');
+                        savePostLocally(newPostData);
+                        formElement.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        
+                        const panel = document.getElementById('adminBlogPanel');
+                        if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+                    });
+            } else {
+                savePostLocally(newPostData);
+                alert('🎉 Đăng bài viết mới thành công! (Lưu trên thiết bị)');
+                formElement.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                const panel = document.getElementById('adminBlogPanel');
+                if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function savePostLocally(postData) {
+            const localPost = { id: Date.now().toString(), ...postData };
+            blogPosts.unshift(localPost);
+            localStorage.setItem('hv_blog_posts', JSON.stringify(blogPosts));
+            filterBlogPosts();
+        }
+
+        // ================= HIỂN THỊ & THU GỌN BLOG =================
+        function renderBlogPosts(posts) {
+            const grid = document.getElementById('blogGrid');
+            const noResults = document.getElementById('noBlogResults');
+            const toggleContainer = document.getElementById('blogToggleContainer');
+            
+            if (!grid) return;
+            grid.innerHTML = '';
+            currentFilteredPosts = posts;
+
+            if (posts.length === 0) {
+                if (noResults) noResults.classList.remove('hidden');
+                if (toggleContainer) toggleContainer.classList.add('hidden');
+                return;
+            } else {
+                if (noResults) noResults.classList.add('hidden');
+            }
+
+            const postsToDisplay = isBlogExpanded ? posts : posts.slice(0, INITIAL_BLOG_LIMIT);
+
+            postsToDisplay.forEach(post => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-lg transition-all flex flex-col cursor-pointer group";
+                card.onclick = () => openBlogModal(post.id);
+
+                card.innerHTML = `
+                    <div class="relative overflow-hidden h-48">
+                        <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/800x450?text=VLXD+Hung+Vuong'">
+                        <span class="absolute top-3 left-3 bg-amber-800 text-white text-xs px-3 py-1 rounded-full font-medium shadow-md">
+                            ${post.categoryName}
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="flex items-center text-xs text-stone-400 gap-3 mb-2">
+                            <span>📅 ${post.date}</span>
+                            <span>✍️ ${post.author}</span>
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-lg group-hover:text-amber-700 transition line-clamp-2 mb-2">
+                            ${post.title}
+                        </h3>
+                        <p class="text-stone-600 text-sm line-clamp-3 mb-4 flex-grow">
+                            ${post.summary}
+                        </p>
+                        <div class="text-amber-700 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Đọc tiếp <span>→</span>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            if (toggleContainer) {
+                if (posts.length > INITIAL_BLOG_LIMIT) {
+                    toggleContainer.classList.remove('hidden');
+                    updateToggleButtonUI(posts.length);
+                } else {
+                    toggleContainer.classList.add('hidden');
+                }
+            }
+        }
+
+        function toggleBlogExpand() {
+            isBlogExpanded = !isBlogExpanded;
+            renderBlogPosts(currentFilteredPosts);
+            if (!isBlogExpanded) {
+                const blogSection = document.getElementById('blog');
+                if (blogSection) blogSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function updateToggleButtonUI(totalPosts) {
+            const btnText = document.getElementById('blogToggleText');
+            const btnIcon = document.getElementById('blogToggleIcon');
+
+            if (isBlogExpanded) {
+                if (btnText) btnText.textContent = "Thu gọn danh sách";
+                if (btnIcon) btnIcon.style.transform = "rotate(180deg)";
+            } else {
+                const hiddenCount = totalPosts - INITIAL_BLOG_LIMIT;
+                if (btnText) btnText.textContent = `Xem thêm (${hiddenCount} bài viết)`;
+                if (btnIcon) btnIcon.style.transform = "rotate(0deg)";
+            }
+        }
+
+        function filterBlogCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.blog-cat-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-700', 'text-white', 'active');
+                btn.classList.add('bg-stone-200', 'text-stone-700');
+            });
+            if (window.event && window.event.target) {
+                window.event.target.classList.remove('bg-stone-200', 'text-stone-700');
+                window.event.target.classList.add('bg-amber-700', 'text-white', 'active');
+            }
+            filterBlogPosts();
+        }
+
+        function filterBlogPosts() {
+            const input = document.getElementById('blogSearchInput');
+            const keyword = input ? input.value.toLowerCase().trim() : '';
+
+            const filtered = blogPosts.filter(post => {
+                const matchCategory = (currentCategory === 'all') || (post.category === currentCategory);
+                const matchKeyword = post.title.toLowerCase().includes(keyword) ||
+                                     post.summary.toLowerCase().includes(keyword) ||
+                                     post.categoryName.toLowerCase().includes(keyword);
+                return matchCategory && matchKeyword;
+            });
+
+            isBlogExpanded = false;
+            renderBlogPosts(filtered);
+        }
+
+        function openBlogModal(id) {
+            const post = blogPosts.find(p => p.id == id);
+            if (!post) return;
+
+            const modalContent = document.getElementById('blogModalContent');
+            modalContent.innerHTML = `
+                <span class="inline-block bg-amber-100 text-amber-800 text-xs px-3 py-1 rounded-full font-bold mb-3">
+                    ${post.categoryName}
+                </span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-stone-900 mb-3">${post.title}</h2>
+                <div class="flex items-center text-xs text-stone-400 gap-4 mb-6 border-b pb-4">
+                    <span>Ngày đăng: ${post.date}</span>
+                    <span>Tác giả: ${post.author}</span>
+                </div>
+                <img src="${post.image}" alt="${post.title}" class="w-full h-64 md:h-80 object-cover rounded-xl mb-6">
+                <div class="prose max-w-none">
+                    ${post.content}
+                </div>
+                <div class="mt-8 pt-6 border-t border-stone-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <span class="text-sm text-stone-500">Cần tư vấn vật liệu thi công?</span>
+                    <a href="https://zalo.me/0977207878" target="_blank" class="bg-amber-700 hover:bg-amber-800 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition">
+                        💬 Liên hệ tư vấn ngay qua Zalo
+                    </a>
+                </div>
+            `;
+
+            document.getElementById('blogModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBlogModal() {
+            document.getElementById('blogModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // ================= XỬ LÝ MENU VÀ SẢN PHẨM =================
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
         function filterProducts(category) {
             const tabs = document.querySelectorAll('.prod-tab');
             tabs.forEach(tab => {
@@ -1025,8 +1460,10 @@
                 tab.classList.add('bg-white', 'text-concrete-600');
             });
 
-            event.target.classList.remove('bg-white', 'text-concrete-600');
-            event.target.classList.add('bg-earth-700', 'text-white');
+            if (window.event && window.event.target) {
+                window.event.target.classList.remove('bg-white', 'text-concrete-600');
+                window.event.target.classList.add('bg-earth-700', 'text-white');
+            }
 
             const items = document.querySelectorAll('.product-item');
             items.forEach(item => {
@@ -1038,40 +1475,35 @@
             });
         }
 
-        // Calculator Tab Switcher
+        // ================= TÍNH TOÁN VẬT LIỆU & IN BẢNG DỰ TOÁN =================
         let activeCalcTab = 'tuong';
+        let currentEstimateData = [];
+        let currentEstimateTitle = "";
+        let currentEstimateText = "";
 
         function switchCalc(tab) {
             activeCalcTab = tab;
-            
-            // Hide all forms
             document.querySelectorAll('.calc-form').forEach(f => f.classList.add('hidden'));
-            
-            // Remove active classes from tab buttons
             document.querySelectorAll('.calc-tab').forEach(b => {
                 b.classList.remove('active', 'bg-earth-600', 'text-white');
                 b.classList.add('text-white/80');
             });
 
-            // Show current form & active tab
             document.getElementById(`calc-form-${tab}`).classList.remove('hidden');
             const targetBtn = document.getElementById(`tab-${tab}`);
-            targetBtn.classList.add('active');
+            if (targetBtn) targetBtn.classList.add('active');
 
-            // Trigger calculation for default view
             calculateMaterial();
         }
 
-        // Global Variable to store current estimation text for Zalo
-        let currentEstimateText = "";
-
-        // Material Calculation Logic
         function calculateMaterial() {
             const resContainer = document.getElementById('result-container');
             let html = "";
             let summaryText = "DỰ TOÁN VLXD HÙNG VƯƠNG:\n";
+            currentEstimateData = [];
 
             if (activeCalcTab === 'tuong') {
+                currentEstimateTitle = "Dự Toán Xây Tường Trát Vữa";
                 const gachType = document.getElementById('tuong-gach-type').value;
                 const tuongDay = parseInt(document.getElementById('tuong-day').value);
                 const dai = parseFloat(document.getElementById('tuong-dai').value) || 0;
@@ -1082,8 +1514,14 @@
                 if (gachType === '4x8x18') gachPerM2 = (tuongDay === 10) ? 80 : 160;
 
                 const totalGach = Math.ceil(dientich * gachPerM2);
-                const xiMangBao = (dientich * (tuongDay === 10 ? 12 : 25) / 50).toFixed(1); // 1 bao = 50kg
+                const xiMangBao = (dientich * (tuongDay === 10 ? 12 : 25) / 50).toFixed(1);
                 const catM3 = (dientich * (tuongDay === 10 ? 0.025 : 0.05)).toFixed(2);
+
+                currentEstimateData = [
+                    { name: `Gạch ống quy cách ${gachType} cm`, quantity: totalGach.toLocaleString('vi-VN'), unit: "Viên", note: `Tường dày ${tuongDay}cm (${dientich.toFixed(1)}m²)` },
+                    { name: "Xi măng xây trát đa dụng", quantity: xiMangBao, unit: "Bao (50kg)", note: "Mác vữa tiêu chuẩn" },
+                    { name: "Cát xây tô sàng sạch", quantity: catM3, unit: "Khối (m³)", note: "Cát hạt mịn/vừa" }
+                ];
 
                 html = `
                     <div class="bg-white p-3 rounded-xl border border-earth-200">
@@ -1108,6 +1546,7 @@
                 summaryText += `- Xây Tường (${dientich.toFixed(1)}m²)\n- Số gạch: ${totalGach} viên\n- Xi măng: ${xiMangBao} bao\n- Cát: ${catM3} m3`;
 
             } else if (activeCalcTab === 'san') {
+                currentEstimateTitle = "Dự Toán Gạch Lát Sàn / Ốp Tường";
                 const gachSize = document.getElementById('san-gach-size').value;
                 const dt = parseFloat(document.getElementById('san-dientich').value) || 0;
 
@@ -1119,8 +1558,13 @@
                 else if (gachSize === '80x80') m2PerThung = 1.92;
                 else if (gachSize === '30x60') m2PerThung = 1.44;
 
-                const numThung = Math.ceil((dt * 1.05) / m2PerThung); // 5% hao hụt
-                const keoBao = Math.ceil(dt / 5); // 1 bao keo dán ~5m2
+                const numThung = Math.ceil((dt * 1.05) / m2PerThung);
+                const keoBao = Math.ceil(dt / 5);
+
+                currentEstimateData = [
+                    { name: `Gạch men quy cách ${gachSize} cm`, quantity: numThung, unit: "Thùng", note: `Đã tính 5% hao hụt (${dt}m²)` },
+                    { name: "Keo dán gạch / Xi măng trát sàn", quantity: keoBao, unit: "Bao (25kg)", note: "Độ bám dính cao" }
+                ];
 
                 html = `
                     <div class="bg-white p-3 rounded-xl border border-earth-200">
@@ -1139,18 +1583,19 @@
                 summaryText += `- Lát Sàn (${dt}m², loại ${gachSize})\n- Số thùng gạch: ${numThung} thùng\n- Keo dán: ${keoBao} bao`;
 
             } else if (activeCalcTab === 'laphong') {
+                currentEstimateTitle = "Dự Toán La Phông / Trần Nhà";
                 const lpType = document.getElementById('laphong-type').value;
                 const dt = parseFloat(document.getElementById('laphong-dientich').value) || 0;
 
-                let numTam = 0;
-                if (lpType === '60x60' || lpType === 'nhua60') {
-                    numTam = Math.ceil(dt / 0.36);
-                } else { // 122x244 cm ~ 2.97 m2
-                    numTam = Math.ceil(dt / 2.97);
-                }
-
+                let numTam = (lpType === '60x60' || lpType === 'nhua60') ? Math.ceil(dt / 0.36) : Math.ceil(dt / 2.97);
                 const thanhChinh = Math.ceil(dt * 0.8);
                 const thanhPhu = Math.ceil(dt * 1.5);
+
+                currentEstimateData = [
+                    { name: `Tấm la phông (${lpType})`, quantity: numTam, unit: "Tấm", note: `Diện tích trần ${dt}m²` },
+                    { name: "Thanh xương chính", quantity: thanhChinh, unit: "Thanh", note: "Khung chịu lực" },
+                    { name: "Thanh xương phụ / Viền tường", quantity: thanhPhu, unit: "Thanh", note: "Khung định hình" }
+                ];
 
                 html = `
                     <div class="bg-white p-3 rounded-xl border border-earth-200">
@@ -1175,13 +1620,19 @@
                 summaryText += `- La Phông Trần (${dt}m²)\n- Tấm la phông: ${numTam} tấm\n- Khung xương: ~${thanhChinh} thanh chính`;
 
             } else if (activeCalcTab === 'son') {
+                currentEstimateTitle = "Dự Toán Sơn Tường & Bột Trét";
                 const dt = parseFloat(document.getElementById('son-dientich').value) || 0;
                 const qy = document.getElementById('son-quycach').value;
 
-                // 1 thùng 18L sơn lót ~ 100m2/lớp; sơn phủ ~ 80m2/2 lớp
                 const thungLot = Math.ceil(dt / (qy === 'high' ? 50 : 100)); 
                 const thungPhu = Math.ceil(dt / 70); 
-                const baoBotTret = Math.ceil(dt / 40); // 1 bao 40kg ~ 40m2 (2 lớp)
+                const baoBotTret = Math.ceil(dt / 40);
+
+                currentEstimateData = [
+                    { name: "Sơn lót kháng kiềm", quantity: thungLot, unit: "Thùng (18L)", note: "Chống ố, tăng độ bám" },
+                    { name: "Sơn phủ màu nội/ngoại thất", quantity: thungPhu, unit: "Thùng (18L)", note: "Lên màu chuẩn đẹp" },
+                    { name: "Bột trét tường (Mastic)", quantity: baoBotTret, unit: "Bao (40kg)", note: "Làm phẳng bề mặt" }
+                ];
 
                 html = `
                     <div class="bg-white p-3 rounded-xl border border-earth-200">
@@ -1206,11 +1657,11 @@
                 summaryText += `- Sơn Tường (${dt}m²)\n- Sơn lót: ${thungLot} thùng 18L\n- Sơn phủ: ${thungPhu} thùng 18L\n- Bột trét: ${baoBotTret} bao`;
 
             } else if (activeCalcTab === 'betong') {
+                currentEstimateTitle = "Dự Toán Khối Lượng Bê Tông Tươi / Trộn";
                 const mac = document.getElementById('betong-mac').value;
                 const volume = parseFloat(document.getElementById('betong-thetich').value) || 0;
 
-                // Định mức 1m3 bê tông
-                let xi = 320, cat = 0.48, da = 0.88, nuoc = 185; // M200
+                let xi = 320, cat = 0.48, da = 0.88, nuoc = 185;
                 if (mac === 'M250') { xi = 360; cat = 0.46; da = 0.85; }
                 else if (mac === 'M300') { xi = 400; cat = 0.44; da = 0.84; }
 
@@ -1218,6 +1669,13 @@
                 const totalCat = (volume * cat).toFixed(2);
                 const totalDa = (volume * da).toFixed(2);
                 const totalNuoc = Math.round(volume * nuoc);
+
+                currentEstimateData = [
+                    { name: `Xi măng mác bê tông ${mac}`, quantity: totalXiBao, unit: "Bao (50kg)", note: `Thể tích ${volume}m³` },
+                    { name: "Cát vàng bê tông hạt lớn", quantity: totalCat, unit: "Khối (m³)", note: "Sạch, đúng tỷ lệ" },
+                    { name: "Đá 1x2 xanh", quantity: totalDa, unit: "Khối (m³)", note: "Đá sàng tiêu chuẩn" },
+                    { name: "Nước sạch trộn bê tông", quantity: totalNuoc, unit: "Lít", note: "Ước tính" }
+                ];
 
                 html = `
                     <div class="bg-white p-3 rounded-xl border border-earth-200">
@@ -1250,305 +1708,131 @@
             currentEstimateText = encodeURIComponent(summaryText + "\n\nXin tư vấn báo giá giúp tôi!");
         }
 
-        // Send Zalo Báo Giá Action
         function sendZaloEstimate() {
             window.open(`https://zalo.me/0977207878`, '_blank');
         }
 
-        // Initialize Calculation on Load
+        // ================= HÀM IN BẢNG DỰ TOÁN / PDF CHUYÊN NGHIỆP =================
+        function printProfessionalEstimate() {
+            const today = new Date().toLocaleDateString('vi-VN');
+            const printWindow = window.open('', '_blank', 'width=900,height=750');
+            
+            if (!printWindow) {
+                alert("Trình duyệt đang chặn pop-up! Vui lòng cho phép hiện popup để in bảng dự toán.");
+                return;
+            }
+
+            const printHTML = `
+                <!DOCTYPE html>
+                <html lang="vi">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Bảng Dự Toán Vật Liệu - VLXD Hùng Vương</title>
+                    <style>
+                        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; margin: 0; padding: 20px; line-height: 1.5; }
+                        .invoice-box { max-width: 800px; margin: auto; padding: 30px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); background: #fff; }
+                        .header-table { width: 100%; border-collapse: collapse; border-bottom: 2px solid #8B4513; padding-bottom: 15px; margin-bottom: 20px; }
+                        .header-table td { vertical-align: top; }
+                        .company-title { font-size: 20px; font-weight: bold; color: #8B4513; text-transform: uppercase; margin: 0; }
+                        .company-info { font-size: 12px; color: #666; margin-top: 4px; }
+                        .invoice-title { text-align: right; }
+                        .invoice-title h2 { font-size: 20px; color: #1E3A8A; margin: 0; text-transform: uppercase; }
+                        .invoice-title p { font-size: 12px; color: #777; margin: 4px 0 0 0; }
+                        .meta-box { width: 100%; margin-bottom: 20px; font-size: 13px; }
+                        .items-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+                        .items-table th { background: #8B4513; color: white; text-align: left; padding: 10px; font-size: 13px; }
+                        .items-table td { padding: 10px; border-bottom: 1px solid #ddd; font-size: 13px; }
+                        .items-table tr:nth-child(even) { background-color: #fafafa; }
+                        .footer-sign { width: 100%; margin-top: 40px; }
+                        .footer-sign td { text-align: center; width: 50%; vertical-align: top; }
+                        .sign-space { height: 80px; }
+                        .note-box { font-size: 11px; color: #666; border-top: 1px dashed #ccc; padding-top: 15px; margin-top: 20px; }
+                        @media print { body { padding: 0; } .invoice-box { border: none; box-shadow: none; padding: 0; } }
+                    </style>
+                </head>
+                <body>
+                    <div class="invoice-box">
+                        <table class="header-table">
+                            <tr>
+                                <td>
+                                    <div class="company-title">CÔNG TY TNHH VLXD HÙNG VƯƠNG</div>
+                                    <div class="company-info">📍 Địa chỉ: 136/2C, Đồng Văn Cống, An Hội, Vĩnh Long</div>
+                                    <div class="company-info">📞 Điện thoại: 0977 207 878 - 0975 238 333</div>
+                                </td>
+                                <td class="invoice-title">
+                                    <h2>BẢNG DỰ TOÁN VẬT LIỆU</h2>
+                                    <p>Ngày lập: ${today}</p>
+                                    <p>Hệ thống tính toán tự động</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="meta-box">
+                            <tr>
+                                <td><strong>Hạng mục tính:</strong> ${currentEstimateTitle}</td>
+                                <td style="text-align: right;"><strong>Đơn vị phát hành:</strong> VLXD Hùng Vương</td>
+                            </tr>
+                        </table>
+
+                        <table class="items-table">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên Vật Liệu / Quy Cách</th>
+                                    <th style="text-align: center;">Khối Lượng Ước Tính</th>
+                                    <th style="text-align: right;">Ghi Chú</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${currentEstimateData.map((item, index) => `
+                                    <tr>
+                                        <td>${index + 1}</td>
+                                        <td><strong>${item.name}</strong></td>
+                                        <td style="text-align: center; color: #8B4513; font-weight: bold;">${item.quantity} ${item.unit}</td>
+                                        <td style="text-align: right; color: #666; font-size: 12px;">${item.note || 'Theo tiêu chuẩn'}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+
+                        <div class="note-box">
+                            * <strong>Lưu ý:</strong> Bảng khối lượng trên mang tính chất dự toán tham khảo cho công trình. Khối lượng thực tế có thể chênh lệch tùy theo thi công thực tế. Quý khách vui lòng liên hệ Hotline/Zalo để nhận báo giá chi tiết chính xác nhất.
+                        </div>
+
+                        <table class="footer-sign">
+                            <tr>
+                                <td>
+                                    <p><strong>Người lập dự toán</strong></p>
+                                    <p style="font-size: 11px; font-style: italic;">(Ký, ghi rõ họ tên)</p>
+                                    <div class="sign-space"></div>
+                                </td>
+                                <td>
+                                    <p><strong>Đại diện VLXD Hùng Vương</strong></p>
+                                    <p style="font-size: 11px; font-style: italic;">(Ký và đóng dấu)</p>
+                                    <div class="sign-space"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <script>
+                        window.onload = function() {
+                            window.print();
+                        }
+                    <\/script>
+                </body>
+                </html>
+            `;
+
+            printWindow.document.write(printHTML);
+            printWindow.document.close();
+        }
+
+        // Initialize App
         window.onload = function() {
             calculateMaterial();
+            fetchPostsFromDatabase();
         };
-    // ================= HỆ THỐNG LƯU TRỮ VÀ XỬ LÝ BLOG =================
-
-// 1. Dữ liệu bài viết gốc sẵn có
-const defaultBlogPosts = [
-    {
-        id: 1,
-        title: "Cách Chọn Gạch Ốp Lát Chống Trơn Cho Nhà Tắm & Sân Vườn",
-        category: "vat-lieu",
-        categoryName: "Chọn vật liệu",
-        date: "15/10/2026",
-        author: "VLXD Hùng Vương",
-        image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
-        summary: "Hướng dẫn lựa chọn loại gạch men, gạch granite có bề mặt nhám mờ, chống trơn trượt tối ưu cho không gian độ ẩm cao.",
-        content: `<p class="mb-4 text-stone-700 leading-relaxed">Chọn gạch cho các khu vực thường xuyên tiếp xúc với nước như nhà tắm, sân thượng hay sân vườn đòi hỏi phải ưu tiên tính an toàn lên hàng đầu. Dưới đây là những tiêu chí quan trọng khi chọn mua gạch tại VLXD Hùng Vương:</p>
-                  <h4 class="font-bold text-lg text-amber-900 mb-2">1. Chọn độ nhám bề mặt (R-Rating)</h4>
-                  <p class="mb-4 text-stone-700 leading-relaxed">Nên chọn các loại gạch men mờ (Matt), gạch viền nhám hoặc gạch granite có độ nhám đạt tiêu chuẩn từ R10 trở lên để hạn chế tối đa nguy cơ trượt ngã.</p>`
-    },
-    {
-        id: 2,
-        title: "Kinh Nghiệm Bảo Quản Xi Măng Đúng Cách Mùa Mưa Tại Miền Tây",
-        category: "kinh-nghiem",
-        categoryName: "Kinh nghiệm",
-        date: "08/10/2026",
-        author: "Kỹ sư Xây dựng",
-        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
-        summary: "Thời tiết mùa mưa tại Vĩnh Long và miền Tây rất dễ làm xi măng bị vón cục. Mẹo xếp kho và kê pallet chuẩn.",
-        content: `<p class="mb-4 text-stone-700 leading-relaxed">Xi măng rất nhạy cảm với độ ẩm. Nếu không bảo quản đúng cách, bao xi măng sẽ bị chết, vón cục gây lãng phí lớn cho công trình.</p>`
-    }
-];
-
-// 2. Kiểm tra bộ nhớ trình duyệt (LocalStorage)
-let savedPosts = localStorage.getItem('hv_blog_posts');
-let blogPosts = savedPosts ? JSON.parse(savedPosts) : defaultBlogPosts;
-let currentCategory = 'all';
-
-// 3. Hàm Đóng/Mở Bảng Đăng Bài
-function toggleAdminPanel() {
-    const panel = document.getElementById('adminBlogPanel');
-    if (panel) {
-        panel.classList.toggle('hidden');
-        if (!panel.classList.contains('hidden')) {
-            panel.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-}
-
-// 4. Xử lý khi nhấn nút "Đăng Bài Ngay"
-function handleAddNewPost(e) {
-    e.preventDefault();
-
-    const title = document.getElementById('newTitle').value.trim();
-    const catVal = document.getElementById('newCategory').value.split('|');
-    const image = document.getElementById('newImage').value.trim();
-    const summary = document.getElementById('newSummary').value.trim();
-    const contentText = document.getElementById('newContent').value.trim();
-
-    // Tự động ngắt đoạn khi nhấn Enter xuống dòng
-    const formattedContent = contentText
-        .split('\n\n')
-        .map(p => `<p class="mb-4 text-stone-700 leading-relaxed">${p.replace(/\n/g, '<br>')}</p>`)
-        .join('');
-
-    const newPost = {
-        id: Date.now(),
-        title: title,
-        category: catVal[0],
-        categoryName: catVal[1],
-        date: new Date().toLocaleDateString('vi-VN'),
-        author: "VLXD Hùng Vương",
-        image: image,
-        summary: summary,
-        content: formattedContent
-    };
-
-    // Đưa bài mới lên đầu danh sách
-    blogPosts.unshift(newPost);
-
-    // Lưu vào bộ nhớ máy tính/trình duyệt
-    localStorage.setItem('hv_blog_posts', JSON.stringify(blogPosts));
-
-    // Cập nhật lại màn hình
-    filterBlogPosts();
-
-    // Xóa chữ trong ô nhập & ẩn form
-    e.target.reset();
-    alert('🎉 Đăng bài viết mới thành công!');
-    toggleAdminPanel();
-}
-
-// 5. Nút Xuất Mã Code để dán vĩnh viễn vào file nếu muốn
-function exportBlogData() {
-    const dataStr = "const defaultBlogPosts = " + JSON.stringify(blogPosts, null, 4) + ";";
-    navigator.clipboard.writeText(dataStr).then(() => {
-        alert("📋 Đã sao chép mã dữ liệu! Bạn có thể dán đè vào biến defaultBlogPosts trong file HTML để lưu vĩnh viễn.");
-    });
-}
-
-// ================= SỬ LÝ HIỂN THỊ VÀ THU GỌN BLOG =================
-const INITIAL_BLOG_LIMIT = 3; // Số lượng bài viết hiển thị mặc định
-let isBlogExpanded = false;   // Trạng thái mở rộng / thu gọn
-let currentFilteredPosts = []; // Luân chuyển danh sách bài viết sau khi lọc
-
-// 1. Hàm Render Bài Viết (Có giới hạn số lượng hiển thị)
-function renderBlogPosts(posts) {
-    const grid = document.getElementById('blogGrid');
-    const noResults = document.getElementById('noBlogResults');
-    const toggleContainer = document.getElementById('blogToggleContainer');
-    
-    if (!grid) return;
-    grid.innerHTML = '';
-
-    currentFilteredPosts = posts;
-
-    if (posts.length === 0) {
-        if (noResults) noResults.classList.remove('hidden');
-        if (toggleContainer) toggleContainer.classList.add('hidden');
-        return;
-    } else {
-        if (noResults) noResults.classList.add('hidden');
-    }
-
-    // Xác định số lượng bài viết sẽ hiển thị dựa trên trạng thái Mở rộng / Thu gọn
-    const postsToDisplay = isBlogExpanded ? posts : posts.slice(0, INITIAL_BLOG_LIMIT);
-
-    postsToDisplay.forEach(post => {
-        const card = document.createElement('div');
-        card.className = "bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-lg transition-all flex flex-col cursor-pointer group animate-fade-in";
-        card.onclick = () => openBlogModal(post.id);
-
-        card.innerHTML = `
-            <div class="relative overflow-hidden h-48">
-                <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/800x450?text=VLXD+Hung+Vuong'">
-                <span class="absolute top-3 left-3 bg-amber-800 text-white text-xs px-3 py-1 rounded-full font-medium shadow-md">
-                    ${post.categoryName}
-                </span>
-            </div>
-            <div class="p-5 flex flex-col flex-grow">
-                <div class="flex items-center text-xs text-stone-400 gap-3 mb-2">
-                    <span>📅 ${post.date}</span>
-                    <span>✍️ ${post.author}</span>
-                </div>
-                <h3 class="font-bold text-stone-900 text-lg group-hover:text-amber-700 transition line-clamp-2 mb-2">
-                    ${post.title}
-                </h3>
-                <p class="text-stone-600 text-sm line-clamp-3 mb-4 flex-grow">
-                    ${post.summary}
-                </p>
-                <div class="text-amber-700 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Đọc tiếp <span>→</span>
-                </div>
-            </div>
-        `;
-        grid.appendChild(card);
-    });
-
-    // Xử lý ẩn/hiện nút Xem thêm/Thu gọn
-    if (toggleContainer) {
-        if (posts.length > INITIAL_BLOG_LIMIT) {
-            toggleContainer.classList.remove('hidden');
-            updateToggleButtonUI(posts.length);
-        } else {
-            toggleContainer.classList.add('hidden');
-        }
-    }
-}
-
-// 2. Hàm chuyển đổi Mở rộng / Thu gọn
-function toggleBlogExpand() {
-    isBlogExpanded = !isBlogExpanded;
-    renderBlogPosts(currentFilteredPosts);
-
-    // Nếu thu gọn lại, cuộn mượt nhẹ lên đầu phần blog để người dùng dễ theo dõi
-    if (!isBlogExpanded) {
-        const blogSection = document.getElementById('blog');
-        if (blogSection) {
-            blogSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-}
-
-// 3. Cập nhật giao diện Nút bấm (Text & Icon)
-function updateToggleButtonUI(totalPosts) {
-    const btnText = document.getElementById('blogToggleText');
-    const btnIcon = document.getElementById('blogToggleIcon');
-
-    if (isBlogExpanded) {
-        if (btnText) btnText.textContent = "Thu gọn danh sách";
-        if (btnIcon) btnIcon.style.transform = "rotate(180deg)";
-    } else {
-        const hiddenCount = totalPosts - INITIAL_BLOG_LIMIT;
-        if (btnText) btnText.textContent = `Xem thêm (${hiddenCount} bài viết)`;
-        if (btnIcon) btnIcon.style.transform = "rotate(0deg)";
-    }
-}
-
-// 4. Lọc bài viết (Reset trạng thái mở rộng khi tìm kiếm hoặc đổi danh mục)
-function filterBlogPosts() {
-    const input = document.getElementById('blogSearchInput');
-    const keyword = input ? input.value.toLowerCase().trim() : '';
-
-    const filtered = blogPosts.filter(post => {
-        const matchCategory = (currentCategory === 'all') || (post.category === currentCategory);
-        const matchKeyword = post.title.toLowerCase().includes(keyword) ||
-                             post.summary.toLowerCase().includes(keyword) ||
-                             post.categoryName.toLowerCase().includes(keyword);
-        return matchCategory && matchKeyword;
-    });
-
-    // Reset về trạng thái thu gọn mỗi khi người dùng tìm kiếm/lọc
-    isBlogExpanded = false;
-    renderBlogPosts(filtered);
-}
-
-// 7. Lọc theo danh mục & Tìm kiếm từ khóa
-function filterBlogCategory(cat) {
-    currentCategory = cat;
-    document.querySelectorAll('.blog-cat-btn').forEach(btn => {
-        btn.classList.remove('bg-amber-700', 'text-white', 'active');
-        btn.classList.add('bg-stone-200', 'text-stone-700');
-    });
-    if (window.event && window.event.target) {
-        window.event.target.classList.remove('bg-stone-200', 'text-stone-700');
-        window.event.target.classList.add('bg-amber-700', 'text-white', 'active');
-    }
-    filterBlogPosts();
-}
-
-function filterBlogPosts() {
-    const input = document.getElementById('blogSearchInput');
-    const keyword = input ? input.value.toLowerCase().trim() : '';
-
-    const filtered = blogPosts.filter(post => {
-        const matchCategory = (currentCategory === 'all') || (post.category === currentCategory);
-        const matchKeyword = post.title.toLowerCase().includes(keyword) ||
-                             post.summary.toLowerCase().includes(keyword) ||
-                             post.categoryName.toLowerCase().includes(keyword);
-        return matchCategory && matchKeyword;
-    });
-
-    renderBlogPosts(filtered);
-}
-
-// 8. Xem chi tiết bài viết trong Cửa sổ Modal
-function openBlogModal(id) {
-    const post = blogPosts.find(p => p.id === id);
-    if (!post) return;
-
-    const modalContent = document.getElementById('blogModalContent');
-    modalContent.innerHTML = `
-        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-3 py-1 rounded-full font-bold mb-3">
-            ${post.categoryName}
-        </span>
-        <h2 class="text-2xl md:text-3xl font-extrabold text-stone-900 mb-3">${post.title}</h2>
-        <div class="flex items-center text-xs text-stone-400 gap-4 mb-6 border-b pb-4">
-            <span>Ngày đăng: ${post.date}</span>
-            <span>Tác giả: ${post.author}</span>
-        </div>
-        <img src="${post.image}" alt="${post.title}" class="w-full h-64 md:h-80 object-cover rounded-xl mb-6">
-        <div class="prose max-w-none">
-            ${post.content}
-        </div>
-        <div class="mt-8 pt-6 border-t border-stone-200 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <span class="text-sm text-stone-500">Cần tư vấn vật liệu thi công?</span>
-            <a href="https://zalo.me/0977207878" target="_blank" class="bg-amber-700 hover:bg-amber-800 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition">
-                💬 Liên hệ tư vấn ngay qua Zalo
-            </a>
-        </div>
-    `;
-
-    document.getElementById('blogModal').classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeBlogModal() {
-    document.getElementById('blogModal').classList.add('hidden');
-    document.body.style.overflow = 'auto';
-}
-
-// Chạy khởi tạo danh sách bài viết khi trang tải xong
-document.addEventListener('DOMContentLoaded', () => {
-    renderBlogPosts(blogPosts);
-});
-	// ================= MỞ BẢNG QUẢN TRỊ BẰNG PHÍM TẮT BÍ MẬT =================
-// Bấm tổ hợp phím Ctrl + Shift + A để bật/tắt khung đăng bài
-document.addEventListener('keydown', function(event) {
-    if (event.ctrlKey && event.shiftKey && (event.key === 'O' || event.key === 'o')) {
-        event.preventDefault();
-        toggleAdminPanel();
-    }
-});
-	</script>
+    </script>
 </body>
 </html>
